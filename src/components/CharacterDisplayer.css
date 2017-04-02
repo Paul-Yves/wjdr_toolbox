@@ -1,0 +1,30 @@
+i.isFemale{
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 70%;
+}
+
+i.delChar{
+  color: #f33;
+  cursor: pointer;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+i.delChar:hover{
+  color: red;
+}
+
+i.moreInfo{
+  color: #3f3;
+  cursor: pointer;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+i.moreInfo:hover{
+  color: green;
+}
+
+div.character:hover{
+    background-color: #e6b280;
+
+}
