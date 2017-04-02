@@ -1,7 +1,9 @@
 {
   "name": "wjdr_manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
+  "main": "electron-starter.js",
+  "homepage": "./",
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^15.4.2",
@@ -10,12 +12,15 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "electron": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron": "electron ."
   }
 }
