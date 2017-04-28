@@ -1,4 +1,6 @@
 import familyNames from "../data/familyNames";
+import {randFromList} from '../data/diceBag';
+
 const nameDict = {
   "Humain":{
     "male":["Adelbert", "Albrecht", "Berthold", "Dieter",
@@ -36,11 +38,6 @@ const nameDict = {
       "Lindara","Lorandara","Maruviel","Pelgrana","Siluvaine","Tallana",
       "Ulliana","Vivandrel","Yuviel"]
   },
-}
-
-function randFromList(list){
-  let rndIdx = Math.floor(Math.random()*list.length);
-  return list[rndIdx];
 }
 
 export const addCharacter = (charInfo) => {

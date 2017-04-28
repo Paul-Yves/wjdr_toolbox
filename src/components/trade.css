@@ -1,0 +1,22 @@
+div.townInfo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    padding: 1em;
+    border: solid goldenrod 1px;
+    border-radius: 5px;
+}
+
+div.resourceCard{
+    min-width: 200px;
+    flex: 1 1 auto;
+    background-color: linen;
+    border: solid 2px brown;
+    border-radius: 3px;
+    margin: 0.3em;
+}
+
+div.resourceCard .name{
+    color: DarkGoldenRod ;
+    font-weight: bold;
+}

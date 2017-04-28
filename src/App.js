@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 
 import logo from './wjdr_logo.png';
 import './App.css';
 import NameGenerator from './components/NameGenerator.js';
+import TradeGenerator from './components/TradeGenerator.js';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             </ul>
           </div>
           <Route exact path="/" component={NameGenerator}/>
+          <Route exact path="/trade" component={TradeGenerator}/>
         </div>
       </Router>
     );
