@@ -20,3 +20,13 @@ div.resourceCard .name{
     color: DarkGoldenRod ;
     font-weight: bold;
 }
+
+div.townForm label{
+    margin-right: 0.5em;
+}
+div.townForm label:hover{
+    background-color: linen;
+}
+div.townForm label input{
+    width: 3em;
+}

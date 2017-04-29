@@ -12,6 +12,9 @@ div.generatorBox{
     display: inline-block;
     vertical-align: top;
 }
+div.generatorBox label{
+    cursor: pointer;
+}
 span.genderSelector{
     border: solid saddlebrown 1px;
     border-radius: 4px;

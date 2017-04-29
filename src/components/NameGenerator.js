@@ -13,7 +13,7 @@ class NameGenerator extends Component {
         isFemale: false,
         raceList: ["Humain", "Nain", "Halfling", "Elfe"],
         selectedRace: "Humain",
-
+        advanced: false,
     }
   }
   doSelRace(event){
@@ -22,9 +22,12 @@ class NameGenerator extends Component {
   changeSex(event){
     this.setState({isFemale: !this.state.isFemale});
   }
+  setAdvanced(event){
+    this.setState({advanced: event.target.checked});
+  }
   generateChar(){
-    const {isFemale, selectedRace} = this.state
-    this.props.actions.addCharacter({isFemale, selectedRace});
+    const {isFemale, selectedRace, advanced} = this.state
+    this.props.actions.addCharacter({isFemale, selectedRace, advanced});
   }
   render() {
     const self = this;
@@ -32,6 +35,7 @@ class NameGenerator extends Component {
     return (
       <div className="NameGen">
         <div className="generatorBox">
+          <label>Avancé <input type="checkbox" checked={self.state.advanced} onChange={self.setAdvanced.bind(self)}/></label>
           <span className="genderSelector" onClick={self.changeSex.bind(self)}>
             <i className={genderIconClass} aria-hidden="true"/>
           </span>
