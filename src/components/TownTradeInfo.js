@@ -30,7 +30,7 @@ class TownTradeInfo extends Component{
     render(){
         const self = this;
         const resources = _.cloneDeep(self.props.resources).sort((a,b)=>a.name.localeCompare(b.name));
-        console.log(resources);
+
         return <div className="townInfo">
             {resources.sort().map((res)=>self.displayRessourceInfo(res))}
         </div>

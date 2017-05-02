@@ -81,12 +81,34 @@ export const humanNames = {
 };
 
 export const dwarfPrefix = [
-
+    "Al", "Ath", "Athran", "Bal", "Bala", "Bel", "Bara", "Bela", "Ber", "Bok", "Bor",
+    "Bur", "Da", "Dam", "Dora", "Drok", "Drong", "Dur", "Dwal", "El", "Ela", "Elan",
+    "Elda", "Fa", "Far", "Fara", "Fim", "Fima", "Firen", "Fur", "Fura", "Ga", "Gim",
+    "Gol", "Gollen", "Gor", "Gota", "Grim", "Gro", "Grun", "Hak", "Haka", "Har",
+    "Hega", "Hur", "Kad", "Kar", "Kata", "Kaz", "Kaza", "Krag", "Logaz", "Lok", "Lun",
+    "Mo", "Mola", "Mor", "Mora", "No", "Nola", "Nor", "Noran", "Nun", "Oda", "Oka",
+    "Olla", "Olf", "Oth", "Othra", "Ro", "Ror", "Roran", "Ska", "Skalla", "Skalf",
+    "Skor", "Skora", "Snor", "Snora", "Sven", "Thar", "Thor", "Thora", "Thron",
+    "Thrun", "Thura", "Un", "Utha", "Ulla", "Vala", "Var", "Vara", "Zak", "Zaka",
+    "Zar", "Zara", "Zam", "Zama"
 ];
 
 export const dwarfMain = {
-    "male": [],
-    "female": [],
+    "male": [
+        "Bin","Bor","Dil","Din","Dok","Dor","Drin","Fin","Gan","Gar","Gil",
+        "Gin","Gni","Grom","Gul","Gun","Gund","Ki","Kin","Krag","Kri","Krin",
+        "Li","Lin","Lik","Lok","Lun","Min","Mir","Nin","Nir","Rag","Ri",
+        "Rig","Rik","Rin","Run","Skin","Tin","Tok","Trek","Trok","Zin","Zor"
+    ],
+    "female": [
+        "Bina", "Bora", "Dila", "Dina", "Doldrna", "Dora", "Drinella", "Fina",
+        "Fya", "Gana", "Gara", "Gella", "Gina", "Groma", "Grondella", "Grotha",
+        "Grunda", "Gruntina", "Gona", "Gora", "Grimella", "Grina", "Gromina",
+        "Gula", "Gunella", "Gundina", "Kina", "Kragella", "Krina", "Kya", "Lina",
+        "Likina", "Loka", "Luna", "Mina", "Mira", "Nina", "Nira", "Nya", "Ragina",
+        "Riga", "Rika", "Rina", "Runa", "Runella", "Skinna", "Skinella", "Tina",
+        "Toka", "Trekella", "Tekina", "Troka", "Zina", "Zora"
+    ],
 };
 
 export const elfPrefix = [
