@@ -95,10 +95,10 @@ export const dwarfPrefix = [
 
 export const dwarfMain = {
     "male": [
-        "Bin","Bor","Dil","Din","Dok","Dor","Drin","Fin","Gan","Gar","Gil",
-        "Gin","Gni","Grom","Gul","Gun","Gund","Ki","Kin","Krag","Kri","Krin",
-        "Li","Lin","Lik","Lok","Lun","Min","Mir","Nin","Nir","Rag","Ri",
-        "Rig","Rik","Rin","Run","Skin","Tin","Tok","Trek","Trok","Zin","Zor"
+        "Bin", "Bor", "Dil", "Din", "Dok", "Dor", "Drin", "Fin", "Gan", "Gar", "Gil",
+        "Gin", "Gni", "Grom", "Gul", "Gun", "Gund", "Ki", "Kin", "Krag", "Kri", "Krin",
+        "Li", "Lin", "Lik", "Lok", "Lun", "Min", "Mir", "Nin", "Nir", "Rag", "Ri",
+        "Rig", "Rik", "Rin", "Run", "Skin", "Tin", "Tok", "Trek", "Trok", "Zin", "Zor"
     ],
     "female": [
         "Bina", "Bora", "Dila", "Dina", "Doldrna", "Dora", "Drinella", "Fina",
@@ -112,23 +112,107 @@ export const dwarfMain = {
 };
 
 export const elfPrefix = [
-
+    "Aed", "Cael", "Fim", "Ind", "Me", "Ruth",
+    "Ael", "Caem", "Fin", "Ist", "Mes", "Ryn",
+    "Aelf", "Caeth", "Gal", "Ith", "Meth", "Tab",
+    "Aen", "Cal", "Gald", "Iy", "Men", "Tal",
+    "Aeth", "Cam", "Gaen", "Kor", "Mor", "Tan",
+    "Alth", "Cel", "Gaes", "Ky", "Mort", "Tar'",
+    "An", "Cit", "ch", "Kyr", "Nal", "Teth",
+    "And", "E1", "Gcn", "La", "Nar", "Tel",
+    "Ar", "Eld", "Gus", "Lan", "Nen", "Tor",
+    "Arg", "Elth", "Geth", "Lil", "Nor", "Ty",
+    "Ast", "En", "Glor", "Lim", "Norl", "Ul",
+    "Ath", "End", "Has", "Lith", "Ri", "Um",
+    "Av", "Er", "Hath", "Loth", "Riabb", "Ur",
+    "Ban", "Ers", "Hel", "Mal", "Riann", "Yr",
+    "Bel", "Fand", "Heth", "Mar", "Rid", "Yv",
+    "Beth", "Fer", "Hilh", "Mas", "Riell",
+    "Cad", "Ferg", "Ill", "Math", "Rien"
 ];
 
 export const elfConnector = [
-
+    "A", "Es", "O", "Rel", "Sa", "So",
+    "Al", "Fan", "Ol", "Ren", "Sal", "Sol",
+    "An", "Fen", "On", "Ri", "San", "Son",
+    "Ar", "Fin", "Or", "Ril", "Se", "U",
+    "As", "I", "Os", "Rin", "Sel", "Ul",
+    "E", "Il", "Ra", "Ro", "Sen",
+    "El", "In", "Ral", "Rol", "Si",
+    "En", "Ir", "Ran", "Ron", "Sil",
+    "Er", "Is", "Re", "Ry", "Sin"
 ];
 
 export const elfMain = {
-    "male": [],
-    "female": [],
+    "male": [
+        "Baen", "Eorl", "Laen", "Main", "Nil", "Tain",
+        "Baine", "Eos", "Laer", "Mal", "Nin", "Than",
+        "Baire", "Eoth", "Laine", "Mar", "Nir", "Thar",
+        "Bar", "Fil", "Laire", "Mil", "Nis", "Thel",
+        "Bhir", "Fin", "Lan", "Min", "Ram", "Thil",
+        "Brin", "Fir", "Las", "Mir", "Rea", "Thir",
+        "Brior", "Hil", "Len", "Nael", "Rel", "Thin",
+        "Brin", "Hin", "Les", "Naen", "Ril", "Thril",
+        "Daen", "Hir", "Lil", "Naer", "Riol", "Thrin",
+        "Daine", "Hor", "Lin", "Nail", "Rion", "Thwe",
+        "Daire", "Il", "Lir", "Nair", "Rior", "Til",
+        "Dar", "In", "Lis", "Nal", "Riorl", "Tin",
+        "Dhil", "Ion", "Lor", "Nan", "Riorn", "Tis",
+        "Dhir", "Ir", "Los", "Nar", "Rit", "Wc",
+        "Drel", "Is", "Mael", "Neal", "Ryel", "Yan",
+        "Drir", "Ith", "Maen", "Nean", "Taen",
+        "Dror", "Lael", "Mair", "Near", "Tair"
+    ],
+    "female": [
+        "A", "Drian", "Fys", "Leth", "Ris", "Teann",
+        "Aine", "Driel", "I", "Let", "Rith", "Ter",
+        "Am", "Drys", "Ille", "Lielle", "Rys", "Thea",
+        "Ann", "Eann", "Ina ", "Licth", "Sar", "Ther",
+        "Arma", "Eauma", "Ira", "Lyann", "Sath", "Thi",
+        "Arna", "Enma", "Isa", "Nelle", "Ser", "Thryn",
+        "Arth", "Earth", "Ithi", "Nem", "Seth", "Thyn",
+        "Ath", "Elle", "Itt", "Neth", "Sir", "Tir",
+        "Beann", "Eth", "La", "Ni", "SiLh", "Tor",
+        "Bet", "Eys", "Lam", "Niell", "Sor", "Tos",
+        "Beth", "Eyth", "Lana", "Niella", "Soth", "Tryan",
+        "Brim", "Fellc", "Larna", "Nith", "Shar", "Trys",
+        "Brys", "Fionn", "Lath", "Ras", "Shcr", "Yill",
+        "Deann", "Flys", "Leann", "Reann", "Shir", "Yrs",
+        "Det", "Fyll", "Leatll", "Rell", "Sys", "Ys",
+        "Deth", "Fynn", "Lel", "Relle", "Tar",
+        "Dys", "Fyr", "Lelle", "Rielle", "Teal"
+    ],
 };
 
 export const halflingPrefix = [
+    "Bag", "Clog", "Ermin", "Gild", "Lud", "Podd",
+    "Balf", "Clof", "Ethan", "Gon", "Lurc", "Porc",
+    "Berc", "Cob", "Falc", "Grop", "Mad", "Riff",
+    "Bill", "Cog", "Fald", "Gudd", "Mag", "Rip",
+    "Bohh", "Crum", "Falm", "Gump", "Man", "Rob",
+    "Bodg", "Crump", "Far", "Ham", "May", "Sam",
+    "Bog", "Curl", "Fild", "Hal", "Mer", "Supp",
+    "Bom", "Dod", "Flac", "Hart", "Mul", "Taff",
+    "Bon", "Dog", "Fogg", "Harp", "Mura", "Talb",
+    "Brog", "Don", "Frit", "Jac", "Murd", "Talc",
+    "Bulc", "Dram", "Ful", "Jas", "Nag", "Tay",
+    "Bull", "Drub", "Func", "Jasp", "Nell", "Tom",
+    "Bust", "Drog", "Gaff", "Joc", "Nobb", "Wald",
+    "Cam", "Dron", "Galb", "Luc", "Od", "Watt",
+    "Cap", "Dure", "Gumm", "Lil", "Og", "Will",
+    "Cul", "Elm", "Gert", "Lob", "Old", "Chund",
+    "Enn", "Giff", "Lott", "Pipp"
 
 ];
 
 export const halflingMain = {
-    "male": [],
-    "female": [],
+    "male": [
+        "Er","In","It","Muche","O","Odoc","Panse","Preste",
+        "Riadoc","Regar","Sagace","Wick","Wit","Y"
+    ],
+    "female": [
+        "A","Adell","Alott","Bell","Baie","Ella","Era",
+        "Et","Fleur","Ia","Ina","Lotta","Petale","Pomme",
+        "Riella","Rose","Saule","Suc","Trude","Y"
+    ],
 };
