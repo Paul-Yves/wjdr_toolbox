@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import './trade.css';
 
-
+/**
+ * Component to display in cards the different resources available in a town
+ * with information such as quantity, demand and price
+ */
 class TownTradeInfo extends Component{
     constructor(props){
         super(props);

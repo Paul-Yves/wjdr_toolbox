@@ -6,6 +6,10 @@ import * as charActions from '../actions/charActions';
 import _ from "lodash";
 import './CharacterDisplayer.css';
 
+/**
+ * Display basic information about a character (name, lastname and sex)
+ * And allow to delete it
+ */
 class CharacterDisplayer extends Component {
   constructor(props){
     super(props);
@@ -21,7 +25,8 @@ class CharacterDisplayer extends Component {
     const self = this;
     const {character} = self.props;
     const sexClass = character.isFemale ? "fa-venus" : "fa-mars";
-    return <div key={character.id} className="character">{character.name+" "+character.lastName} 
+    return <div key={character.id} className="character">
+        <span className="civility">{character.name+" "+character.lastName} </span>
         <i className={"fa isFemale "+sexClass} aria-hidden="true"></i>
         <i className="fa fa-times delChar" aria-hidden="true" onClick={self.delete.bind(self)}></i>
     </div>

@@ -7,6 +7,9 @@ import TownTradeInfo from './TownTradeInfo';
 
 import './trade.css';
 
+/**
+ * Component allowing to generate and display trade info about a town after setting basic parameters
+ */
 class TradeGenerator extends Component{
     constructor(props){
         super(props);

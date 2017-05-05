@@ -43,7 +43,11 @@ const nameDict = {
       "Ulliana", "Vivandrel", "Yuviel"]
   },
 }
-
+/**
+ * Create an advanced names using the corresponding data and depending on the race
+ * @param {*} charInfo 
+ * @param {string} sexe 
+ */
 const advancedName = function (charInfo, sexe) {
   if (charInfo.selectedRace === "Humain") {
     return randFromList(humanNames[sexe]);
@@ -54,7 +58,10 @@ const advancedName = function (charInfo, sexe) {
   }
   return randFromList(halflingPrefix) + randFromList(halflingMain[sexe]);
 }
-
+/**
+ * Add basic info about a character: name, lastname and sex
+ * @param {*} charInfo 
+ */
 export const addCharacter = (charInfo) => {
   const sexe = charInfo.isFemale ? "female" : "male";
   let name = randFromList(nameDict[charInfo.selectedRace][sexe]);

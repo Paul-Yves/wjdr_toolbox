@@ -1,7 +1,6 @@
 i.isFemale{
   margin-left: 1em;
   margin-right: 1em;
-  font-size: 70%;
 }
 
 i.delChar{
@@ -23,7 +22,12 @@ i.moreInfo{
 i.moreInfo:hover{
   color: green;
 }
-
+div.character span.civility{
+  flex: 8 1 auto;
+}
+div.character{
+  display: flex;
+}
 div.character:hover{
     background-color: #e6b280;
 

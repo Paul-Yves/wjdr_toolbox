@@ -6,6 +6,10 @@ import * as charActions from '../actions/charActions';
 import './NameGenerator.css';
 import CharacterDisplayer from "./CharacterDisplayer";
 
+/**
+ * Basic component with form to specify what type of character can be generated
+ * Display a box with current generated characters
+ */
 class NameGenerator extends Component {
   constructor(props){
     super(props);
