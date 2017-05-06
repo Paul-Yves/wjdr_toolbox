@@ -5,6 +5,7 @@ import logo from './wjdr_logo.png';
 import './App.css';
 import NameGenerator from './components/NameGenerator.js';
 import TradeGenerator from './components/TradeGenerator.js';
+import CriticalsDisplayer from './components/CriticalsDisplayer.js';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             </ul>
           </div>
           <Route exact path="/" component={NameGenerator}/>
+          <Route exact path="/criticals" component={CriticalsDisplayer}/>
           <Route exact path="/trade" component={TradeGenerator}/>
         </div>
       </Router>

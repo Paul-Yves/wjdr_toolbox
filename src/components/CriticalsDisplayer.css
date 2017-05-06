@@ -1,0 +1,23 @@
+div.critDisplayer{
+    display: flex;
+}
+div.critDisplayer .sliderContainer{
+    width: 400px;
+}
+
+div.critDisplayer div.source select{
+    margin-left: 1em;
+}
+div.critDisplayer div.formPart{
+    flex: 1 1 auto;
+}
+div.critDisplayer div.formPart.sliderContainer{
+    flex: 0 0 auto;
+}
+div.critDisplayer div.formPart.tableContainer{
+    flex: 10 1 auto;
+}
+
+div.critDisplayer .sliderContainer .rangeslider-horizontal .rangeslider__fill {
+    background-color: red;
+}
