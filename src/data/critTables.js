@@ -304,9 +304,426 @@ export const firearm = {
         "s’écoule sur son visage. Un moment plus tard, elle s’effondre raide morte. "
     ]
 }
+
+const cutting = {
+    "arm": [
+        "1 Votre arme frappe le bras de votre adversaire, ce qui provoque une petite perte de sang. Au début du " +
+        "prochain tour votre adversaire doit faire un test de CC -10% ou lâchera ce qu’il tenait dans sa main.",
+        "2 Votre arme entaille un ou plusieurs doigts de votre adversaire. Il doit immédiatement faire un test de " +
+        "FM+E -20% ou bien il lâchera ce qu’il tenait en main.",
+        "3 Votre arme coupe le biceps de votre adversaire, ratant de peu une artère principale. Votre adversaire " +
+        "doit faire un test de (FM+E)/2 -30% ou bien lâcher ce qu’il tenait en main. Pour le reste du combat, les " +
+        "parades tentées avec ce bras souffrent d’un modificateur de -20%.",
+        "4 Votre arme touche un muscle de l’épaule de votre adversaire, en envoyant un choc électrique sur toute " +
+        "la longueur du bras. Tout ce qui est tenu en main est obligatoirement lâché. Pour le reste du combat, " +
+        "votre adversaire verra sa CC -5% en raison de la distraction induite par la douleur.",
+        "5 Votre arme entrouvre la peau sur toute la longueur de l'avant-bras de l’adversaire, révélant plusieurs " +
+        "couches de muscles. Il lâche toute chose tenue en main. En outre, votre adversaire doit faire un test de " +
+        "FM -10% pour éviter de lâcher aussi ce qu’il tient dans l’autre main afin de venir se tenir l’avant-bras " +
+        "touché. Pour le reste du combat, votre adversaire verra sa CC réduite de 10%.",
+        "6 Votre arme tranche profondément le poignet et certains des os de l’avant-bras. Il lâche ce qu’il tenait en " +
+        "main et la main est inutilisable pendant les prochains 1d10 / 2 tours. Jusqu'à ce qu’il reçoive des soins " +
+        "magiques ou classiques, votre adversaire verra sa CC réduite de 20%.",
+        "7 Votre arme tranche profondément l'avant-bras de votre adversaire, obtenant une rupture du tendon des " +
+        "muscles et touchant les os de l’avant-bras (fracture). Votre adversaire ne peut rien faire pour le " +
+        "prochain tour, excepté hurler de douleur, et vous devez faire un test de F +20% pour déloger votre " +
+        "arme. Cette réussite entraîne un risque d’infection supplémentaire à votre adversaire.",
+        "8 Votre arme perce sous les biceps et tranche tous les tendons jusqu’aux os. L’adversaire lâche ce qu’il a " +
+        "en main et l’avant-bras ne sert plus a rien jusqu’a ce qu’il soit guéri par des soins. En outre, votre " +
+        "adversaire continue à perdre du sang par les plaies, il faudra donc arriver à stopper l’hémorragie " +
+        "(bandage minimum). CC réduite de 30% pour les prochains tours ou jusqu’à ce qu’il tombe dans les " +
+        "pommes. Test de FM+20% pour ne pas quitter le combat.",
+        "9 Votre arme tranche proprement un grand morceau de chair de l’épaule, ce qui provoque une grande " +
+        "giclée de sang, qui se déverse ensuite librement sur la longueur du bras. Ce qui est en main est lâché, " +
+        "et votre adversaire doit faire un test de FM -30% pour rester debout. En outre, l’hémorragie devra être " +
+        "stoppée (plus importante encore qu’en 8). Il souffrira de -20% à sa CC et à sa F pour le reste du " +
+        "combat. Test de FM ou quitte le combat.",
+        "10 Votre arme tranche 1d10 / 2 doigts de votre adversaire. Sur un 10, toute la main est coupée au poignet. " +
+        "Réduire de façon permanente -3% en Ag pour chaque doigt perdu. Votre adversaire doit faire un test " +
+        "de FM -10% ou fuir immédiatement. ",
+        "11 Votre adversaire voit son bras tranché jusqu’au coude. De grandes giclées de sang dues a l’hémorragie " +
+        "risquent de vite venir a bout de lui a moins d’arriver à le soigner très rapidement. Votre adversaire doit " +
+        "faire un test de FM -20% ou fuir immédiatement. -15% Ag définitive à cause de la perte de sa main.",
+        "12 Votre arme fracture la clavicule de votre adversaire. Toute chose tenue en main tombe par terre, il y a " +
+        "50% de chances qu'un fragment osseux crève un poumon. Un poumon perforé exige une guérison " +
+        "magique dans les 1d10 tours ou la mort sera inévitable. Même si le poumon n'est pas perforé, CC, CT, " +
+        "F et Ag sont réduites de 20% jusqu’a la guérison. Test de FM-30% ou fuite.",
+        "13 Votre arme tranche votre adversaire proprement de l’épaule à la poitrine. Du sang coule à grosses " +
+        "gouttes, et votre adversaire tombe au sol inconscient. Seule une guérison peut empêcher la mort dans " +
+        "les 1d10 / 2 tours, mais rien ne peut empêcher la perte du bras. Il perdra Ag/2.",
+        "14 Votre arme perfore votre adversaire par l'épaule jusqu’a s’enfoncer dans les cage thoracique. Choqué, " +
+        "votre adversaire s’évanouit lentement dans une mare de sang de plus en plus large, il meurt après " +
+        "plusieurs spasmes nerveux au bout de 1d10 / 2 tours.",
+        "15 Votre arme se plante dans l'épaule de votre adversaire, avant de décrire un large arc de cercle " +
+        "traversant la cage thoracique avant d'émerger près de sa hanche. Votre adversaire tombe en deux " +
+        "morceaux, raide mort avant d’avoir toucher le sol."
+    ],
+    "body": [
+        "1 Votre arme fend la couche supérieure de la protection de votre adversaire (vêtement ou armure), " +
+        "entraînant la réduction d’1 point d’armure à cet endroit précis (sauf armure de plates). S’il n’y a pas " +
+        "d’armure, c’est la peau qui est tranchée ce qui entraîne suffisamment de douleur pour distraire " +
+        "l’adversaire et lui faire perdre 1⁄2 action à son prochain tour. ",
+        "2 Votre arme perce le côté de votre adversaire, mais manque tous les organes internes. Le choc de la " +
+        "douleur entraîne un malus de -10% aux actions du prochain tour de votre adversaire. ",
+        "3 Votre arme tranche de biais une des côtes de votre adversaire, qui doit réussir un test d’E -10% ou ne " +
+        "faire rien d’autre au prochain tour que des actions de parades pendant qu’il essaye de reprendre son " +
+        "souffle. En ratant ce test, il doit en plus faire un test de FM ou lâcher son arme. ",
+        "4 Votre arme échoue dans la viande au dessus de la clavicule, ce qui oblige votre adversaire à faire un test " +
+        "de FM à -30% pour éviter de perdre son arme. ",
+        "5 Votre arme tranche méchamment la poitrine de votre adversaire, ce qui réduit de 2 les PA pour toute " +
+        "armure (sauf plates -1) à cette localisation (par exemple une partie de l’armure peut voler ou tomber " +
+        "au sol ou pendre misérablement). Il doit aussi faire un test d’E à -20% ou être étourdi pendant les " +
+        "prochains 1d10/2 tours (parade uniquement). ",
+        "6 Votre arme pénètre dans la partie supérieure de son abdomen, lacérant une partie de la vésicule biliaire " +
+        "en répandant son contenu. Votre adversaire doit faire un test d’E-20% ou passer les prochains 1d10/2 " +
+        "tours à vomir. Une mort par infection se produira s’il n’est pas bien soigné dans les prochains jours. ",
+        "7 Votre arme s’enfonce profondément sur l’un des côtés de votre adversaire, dans la partie osseuse de la " +
+        "hanche. Votre adversaire ne peut rien faire le prochain tour à part hurler de douleur, et vous devez faire " +
+        "un test F+20% pour déloger votre arme. Une réussite entraîne un risque d’infection supplémentaire à " +
+        "votre adversaire. ",
+        "8 Votre arme pénètre dans l'aine, provoquant l’étourdissement de votre adversaire pendant 1d10 tours. En " +
+        "outre, le personnage doit faire un test d’E afin d’éviter de devenir stérile à cause de la plaie. ",
+        "9 Votre arme transperce le bas-ventre et l'aine de votre adversaire, perforant par la même occasion sa " +
+        "vessie. L’urine et son odeur se déversent de la plaie et sur votre lame, l’adversaire doit faire un test de " +
+        "FM-10% ou acquérir 1 PF (il se rend compte de ce qui s'est passé). Toute guérison doit être obtenue " +
+        "dans les 48 heures ou il mourra dans 2d10 jours à compter de l'infection. [après la guérison " +
+        "chirurgicale, faire un test d’E-10% pour éviter une infection aléatoire]. Le personnage sera de toute " +
+        "façon sujet à des fuites urinaires, ce qui peut être gênant dans certaines situations (fuite d’urine au bon " +
+        "vouloir du MJ). Jusqu'à la guérison, toutes ses actions sont à -20%. ",
+        "10 Votre arme lacère profondément le ventre de votre adversaire, touchant ses intestins. Votre adversaire " +
+        "doit faire un test d’E-10% ou tomber inconscient. S’il résiste, ses actions se feront à -20%. Il mourra à " +
+        "moins d’être soigné dans les 24 heures. [Note au MJ : s’il est guéri par chirurgie, le blessé devra faire " +
+        "un test d’E-30% ou bien il subira une infection]. ",
+        "11 Votre arme s’enfonce profondément dans la cavité abdominale, lacérant la rate. En plus de laisser " +
+        "tomber son arme de douleur, votre adversaire subit une perte à toutes ses caractéristiques de -5% " +
+        "cumulative (CC, CT, F, E), ainsi que la perte d’1/2 action. Test d’E à la moitié de CC pour voir s’il ne " +
+        "tombe pas dans les pommes. Arrivé à 0 en CC, il s’évanouit automatiquement. La guérison doit être " +
+        "obtenue 1d10h pour éviter la mort. ",
+        "12 Votre arme tranche sur toute la largeur de l'abdomen, l’ouvrant entièrement et déversant les entrailles " +
+        "de votre adversaire sur ses pieds. La mort par perte de sang interviendra dans les 1d10 tours suivants à " +
+        "moins d’être soigné. Pendant ce temps, l’adversaire ne pourra tenter aucune action que de tenter " +
+        "vainement de rassembler et d’essayer vainement de remettre ses entrailles. S’il survit à cette horrible " +
+        "expérience, il gagnera 1d10/2 PF. ",
+        "13 Votre arme lacère profondément le côté de votre adversaire, fracturant 1d10/2 côtes, touchant un rein " +
+        "avant de finir par se loger dans la colonne vertébrale. Les genoux de l’adversaire fléchissent, et il " +
+        "tombe au sol inconscient. Il devra être soigné dans les 1d10 tours suivants. Si votre adversaire survit à " +
+        "ce coup, il doit réussir un test d’E-20% pour éviter une paralysie permanente (lancer 1d10 : 1-4 jambe " +
+        "droite, jambe gauche 5-8, 9-10 deux jambes). ",
+        "14 Votre arme s’enfonce profondément dans la poitrine de votre adversaire, fracturant des côtes, " +
+        "perforant ses poumons, avant de finalement pourfendre le cœur et l’artère aorte. Une fontaine de sang " +
+        "vous arrose tout les deux. La mort survient 1d10/2 tours plus tard. ",
+        "15 La puissance du coup découpe littéralement votre adversaire de la poitrine jusqu’au ventre. Il tombe à " +
+        "terre en deux morceaux."
+    ],
+    "head": [
+        "1 Le plat de votre lame frappe le casque de votre adversaire, l'envoyant voler à 1d6/2 m au loin. Si votre " +
+        "adversaire ne portait pas de casque, il est momentanément étourdis et agira en dernier au prochain " +
+        "tour. ",
+        "2 Votre arme touche l’arrière de la tête, désorientant momentanément votre adversaire. Au prochain tour " +
+        "tous ses tests de CC seront diminués de 10%. ",
+        "3 Votre arme frappe au niveau de la tempe ce qui désoriente momentanément votre adversaire. Au " +
+        "prochain round sa de CC réduite de 20%. ",
+        "4 Votre arme ouvre une balafre qui court le long du front, le sang coule sur les yeux de votre adversaire. " +
+        "Pour les prochains 1d10/2 tours, votre adversaire verra sa CC réduite de 30%. ",
+        "5 Le plat de l’arme lance un solide coup sur le côté de la tête, étourdissant l’adversaire pendant 1d10/2 " +
+        "tours, au cours desquels aucune action ne peut être tentée. ",
+        "6 Votre arme sculpte une belle coupure dans le cou de votre adversaire, le sang giclant de la plaie. Votre " +
+        "adversaire perd du sang et si la blessure n'est pas bandée au bout de BE tours, il devra faire un test d’E " +
+        "pour éviter de tomber inconscient. Chaque tour suivant le test se fera à -10% cumulatif. ",
+        "7 Votre arme tranche une partie de l’oreille de votre adversaire. Il aura 10% de subir un vertige (se " +
+        "retrouvera par terre avec la tête qui tourne, aura donc un malus de combat pendant 1d10 tours). ",
+        "8 Votre arme tranche le nez de votre adversaire alors qu’il se penche en arrière dans une tentative " +
+        "maladroite afin d’esquiver le coup. Le nez atterri 1d10/6 m plus loin. Du sang gicle de la plaie, jusqu’à " +
+        "ce qu’il soit soigné. Test d’E au bout d’1d10+2 tours pour éviter de tomber dans les pommes. Un " +
+        "personnage qui perd son nez souffrira d’un malus permanent de -5% en Soc (-10% dans la haute " +
+        "société ou avec les dames), mais gagnera un +5% en Intimidation. ",
+        "9 Votre arme s’enfonce profondément dans le cuir chevelu de votre adversaire, s’enfonçant à travers le " +
+        "casque (ou le crâne, si votre adversaire n'a pas de casque). Il sera étourdi pour 1d10 tours, et vous " +
+        "devez faire un test de F à +10% pour déloger votre arme. La libération de l’arme entraîne un risque " +
+        "d’infection supplémentaire. ",
+        "10 Votre arme tranche nette l’oreille droite (1d6 pair) ou gauche (impair) de votre adversaire qui atterrit à " +
+        "1d10/6 m. Un saignement important survient. Test d’E au bout d’1d10 tours pour éviter de tomber " +
+        "dans les pommes. De plus il existe 20% de chance d’avoir un vertige (se retrouvera par terre avec la " +
+        "tête qui tourne, aura donc un malus de combat pendant 1d10 tours). Les actions engagées se font à - " +
+        "10% jusqu’à la guérison. S’il survit, il souffrira en permanence à -5% en Soc (-10% en haute société " +
+        "ou avec les dames), mais gagnera un +5% en Intimidation. De plus, tous ses futurs tests de perception " +
+        "(écoute) se feront à -20%. ",
+        "11 Votre arme lui ouvre une entaille sur le côté de la tête, provoquant une importante perte de sang. Votre " +
+        "adversaire verra sa CC réduite de 5% cumulatif, jusqu'à ce que cette blessure soit bandée. Test d’E à la " +
+        "moitié de CC pour voir s’il ne tombe pas dans les pommes. Arrivé à 0 en CC, il s’évanouit " +
+        "automatiquement. ",
+        "12 Votre arme ouvre une grande entaille allant du front jusqu’à sa mâchoire, détruisant l’un de ses yeux " +
+        "(1d6 : pair=œil droit, impair=œil gauche). Votre adversaire doit faire un test d’E à -20% ou tomber " +
+        "inconscient. S’il survit, il perdra définitivement -10% en Soc, mais gagnera +5% en Intimidation. En " +
+        "outre, toutes les compétences liées à la vue seront divisées par 2, tout comme les bonus accordés par " +
+        "les talents de Tir ou de Vision. ",
+        "13 Votre arme tranche proprement la mâchoire inférieure de votre adversaire causant la perte de 1d10 " +
+        "dents et d’une partie de la langue. La perte de sang est importante. Il doit faire immédiatement un test " +
+        "d’E à -30% ou tomber à terre inconscient. S’il survit, il perdra définitivement -20% en Soc mais " +
+        "bénéficiera de +10% en Intimidation. A cause de la perte partielle de sa langue, ce personnage devra " +
+        "désormais positionner sa langue différemment en la callant entre les dents. ",
+        "14 Votre arme creuse un arc de cercle partant de sa tempe en passant par le biais de sa mâchoire et vient " +
+        "s’échouer profondément dans l'épaule. Vous êtes douché par une pulvérisation de sang. Rien ne peut " +
+        "empêcher la mort dans 1d10/2 tours. ",
+        "15 Votre arme tranche proprement la tête de votre adversaire à la base du cou (si c’est un humanoïde). " +
+        "L’envoyant valser à 1d10/2 pieds, sans qu’il n’ait le temps de crier. La mort survient le tour suivant."
+    ],
+    "leg": [
+        "1 Le plat de votre lame frappe le tibia de votre adversaire, l’obligeant à faire un test de FM-10% pour ne " +
+        "pas lâcher son arme en saisissant sa jambe blessée tout en sautillant sur s’autre. Vous bénéficiez d'un " +
+        "+10% si vous tentez un jet de manœuvre durant ce tour. ",
+        "2 Votre arme transperce le mollet de votre adversaire, l’obligeant à faire un test de FM-20% pour ne pas " +
+        "lâcher son arme en essayant de retirer la votre (automatique pour vous). ",
+        "3 Votre arme frappe le haut de sa jambe. Votre adversaire doit faire un test d’E-10% pour éviter de " +
+        "tomber par terre en perdant 1⁄2 action. ",
+        "4 Votre arme pénètre la viande de la cuisse, évitant l’artère. Un test d’E-20% est nécessaire pour éviter de " +
+        "se retrouver au sol et de perdre 1⁄2 action. ",
+        "5 Votre arme tranche profondément l’intérieur de la cuisse, près de l’aine, manquant de peu l’artère " +
+        "fémorale. Votre adversaire doit faire un test d’E-20% ou lâcher son arme et pendant 1d10/2 tours saisir " +
+        "la plaie en criant. ",
+        "6 Votre arme creuse profondément les muscles de la cuisse de votre adversaire avant de venir se loger " +
+        "dans le fémur. Il tombe à genoux et ne peut rien faire du prochain round que d’hurler de douleur. Vous " +
+        "devez faire un test de F+20% pour déloger l’arme, ce qui entraîne un risque d’infection " +
+        "supplémentaire. ",
+        "7 Votre arme endommage un tendon de votre adversaire, réduisant son mouvement de 1 point jusqu’à sa " +
+        "guérison. De plus il devra faire un test d’E-10% ou tomber par terre. ",
+        "8 Votre arme pénètre et détruit la rotule de votre adversaire. Il doit faire un test de FM-30% ou passer ses " +
+        "1d10 prochains tours à saisir son genou agonisant. La réussite permet de réduire ce temps de moitié. ",
+        "9 Votre arme tranche profondément dans le genou de votre adversaire, rompant les ligaments croisés qui " +
+        "ancrent les os de la partie supérieure de la jambe à ceux de la partie inférieure. Votre adversaire " +
+        "s'écroule et ne peut que parer pendant les 1d10 prochains tours. Son M est réduit de moitié jusqu'à la " +
+        "guérison. ",
+        "10 Votre arme endommage le tendon d’Achille de votre adversaire, réduisant son M de 2 jusqu’à la " +
+        "guérison et le forçant à réussir un test d’E-20% pour éviter de se retrouver à terre. Ses caractéristiques " +
+        "de combat (A, CC, F, E) sont réduites de -10% pendant 1d10 tours. ",
+        "11 Votre arme tranche plusieurs orteils de votre adversaire. Jeter 1d10 : 1-3 deux orteils 4-6 trois orteils " +
+        "7-9 quatre orteils 10 gros orteil. La perte de ce dernier entraîne la baisse du M de 1 point permanente. " +
+        "De plus il verra ses caractéristiques de combat (A, CC, F, E) réduites de -10% pendant 1d10 tours. ",
+        "12 Votre arme tranche le pied à la cheville. Votre adversaire subit une perte à toutes ses caractéristiques " +
+        "de -5% cumulative (CC, CT, F, E), ainsi que la perte d’1/2 action. Test d’E à la moitié de CC pour voir " +
+        "s’il ne tombe pas dans les pommes. Arrivé à 0 en CC, il s’évanouit automatiquement. La guérison doit " +
+        "être obtenue 1d10h pour éviter la mort. Son M sera divisé par 2. Une prothèse de pied permet de " +
+        "regagner 1 en M. ",
+        "13 Votre arme tranche proprement la jambe de l’adversaire au niveau du genou. La mort par perte de " +
+        "sang aura lieu 1d10 tours à moins d’obtenir la guérison avant. Rien ne pourra restaurer la perte de la " +
+        "jambe. Votre adversaire subit une perte à toutes ses caractéristiques de -5% cumulative (CC, CT, F, E), " +
+        "ainsi que la perte d’1/2 action. Test d’E à la moitié de CC pour voir s’il ne tombe pas dans les " +
+        "pommes. Arrivé à 0 en CC, il s’évanouit automatiquement. La guérison doit être obtenue 1d10h pour " +
+        "éviter la mort. Son M sera divisé par 2. Une prothèse de jambe permet de regagner 1 en M. ",
+        "14 Votre arme pénètre profondément à l’intérieur de la cuisse de votre adversaire, lacérant l’artère " +
+        "fémorale. Votre adversaire s’écroule inconscient pulvérisant de sang tout ce qui se trouve alentours. Il " +
+        "nage bientôt dans une mare de sang, provoquant sa mort dans les 1d10/2 tours qui suivent. ",
+        "15 Votre arme creuse profondément dans la hanche et le bassin de votre adversaire, proche de couper " +
+        "carrément la jambe avant de s’enfouir profondément dedans. Il s’écroule mort avant d’avoir touché le " +
+        "sol."
+    ]
+}
+const arrow = {
+    "arm": [
+        "1 Votre tir écorche la main de votre adversaire, le forçant à réussir un test de FM-10% pour éviter de " +
+        "lâcher ce qu'il a en main. Quelque soit le résultat, il aura l'initiative la plus basse au tour prochain. ",
+        "2 Votre tir entaille le poignet de votre adversaire, ouvrant une petite mais vicieuse blessure. Au prochain " +
+        "tour, sa CC et CT seront à -10%. ",
+        "3 Votre tir ricoche sur l'épaule de votre adversaire le forçant à lâcher ce qu'il tenait en main. Le bras est " +
+        "inutilisable pendant 1d6/2 tours. ",
+        "4 Votre tir écorche le biceps de votre adversaire, faisant couler son sang le long du bras. Au prochain tour " +
+        "ses CC et CT seront à -20%. ",
+        "5 Votre tir tranche la viande au niveau de l'épaule l'obligeant à réussir un test de FM-20% ou il lâchera ce " +
+        "qu'il tenait en main (se tiendra l'épaule). Il perdra l'usage de son bras pendant 1d6 tours. ",
+        "6 Votre tir tranche le dessus de la main, tranchant 1d10/2 tendons commandant l'action des doigts, " +
+        "entaillant les petits os. La cible est horrifiée de ne plus rien pouvoir saisir tout en voyant ressortir une " +
+        "partie des petits os en dehors de la chair de ses doigts. Au prochain tour sa CC et CT subissent -20% et " +
+        "à moins que la main soit guérie magiquement, votre adversaire perdra -3% en Ag par doigt touché. ",
+        "7* Votre tir transperce la main de votre adversaire entre les os métacarpes, fixant tout ce qui est tenu en " +
+        "main à celle-ci. Jusqu'à ce que la flèche soit retirée, le BF-1 et CC, CT-20%. La main sera inutilisable " +
+        "jusqu'à ce qu'elle guérisse. ",
+        "8* Votre tir perce le poignet de votre cible, s'encastrant dans les os carpes. Jusqu'à ce que la flèche soit " +
+        "délogée, la F-2 et CC, CT-30%. La main sera inutilisable jusqu'à ce qu'elle soit guérie. ",
+        "9* Votre tir perce l'avant-bras de votre cible, en venant se loger dans le cubitus. Se tordant de douleur, la " +
+        "victime perd les actions restantes ce tour et doit réussir un test d'E-20% avant de pouvoir effectuer la " +
+        "moindre action. Un test peut être réalisé chaque tour avec un malus moindre. Le bras reste inutilisable " +
+        "jusqu'à ce qu'il soit soigné. ",
+        "10* Votre tir vient se loger dans l'épaule de votre cible, fracturant le cubitus et fixant le bras dans un " +
+        "angle de 90°. L'adversaire est étourdit par la douleur pendant 1d10/2 tours, et jusqu'à ce que la flèche " +
+        "soit retirée, le BF-3. Le bras sera inutilisable avant que la fracture soit guérie au bout de 1d10/2 " +
+        "semaines. ",
+        "11* Votre tir perce le biceps de votre cible, lacérant l'artère brachiale. La cible saigne énormément de sa " +
+        "blessure, et perdra -10% cumulatif par tour à chaque caractéristique de combat (CC, CT, F, E). Elle " +
+        "tombera inconsciente lorsqu'une de ces caractéristiques atteindra 0. ",
+        "12* Votre tir passe à travers la viande du cou de votre adversaire, endommageant le plexus brachial. " +
+        "Quelque soit ce qu'il avait en main, cela tombe par terre. Le bras est complètement paralysé à partir de " +
+        "l'épaule. Et à moins de recevoir une guérison magique dans les 1d10 tours, la paralysie deviendra " +
+        "permanente. ",
+        "13* Votre tir fracture la clavicule de votre cible et endommage l'artère proche avant de venir se loger " +
+        "dans la viande de l'épaule. La cible doit faire un test d'E-30% ou tomber inconsciente. Une hémorragie " +
+        "va commencer, donnant 5% de chance cumulatif de mourir à chaque tour. ",
+        "14* Votre tir entre dans l’épaule dans un drôle d'angle pour ressortir par l'arrière du cou. Votre cible " +
+        "attend quelques secondes, incertaine, avant de sentir ses jambes se fléchir en s’écroulant au sol. La " +
+        "mort est inévitable au bout d'1d10/2 tours. ",
+        "15* Votre tir frappe la zone entre l'épaule et la poitrine, s'enfonçant profondément jusqu'à dépasser de " +
+        "l'autre côté des côtes dans le dos de la cible. Il s'agenouille par terre puis s'étale de tout son long. Un " +
+        "doux bruit de succion émane de la blessure, alors qu'une brève respiration déchiquetée se fait entendre. " +
+        "Comme dernier souffle."
+    ],
+    "body": [
+        "1 Votre tir écorche le tronc de votre cible, diminuant la PA -1 (excepté la plate). Si votre adversaire ne " +
+        "porte pas d'armure à cet endroit, il verra son vêtement déchiré et perdra 1⁄2 action. ",
+        "2 Votre tir écorce le tronc de votre cible, contusionnant une côte. Obligé de protéger son côté, votre cible " +
+        "ne pourra que parer lors de son prochain tour. ",
+        "3 Votre tir ricoche sur une côte de votre cible, enlevant une petite bande de chair. Obligé de protéger son " +
+        "côté, votre cible ne pourra que parer pendant 1d6/2 tours. ",
+        "4 Votre tir ricoche fortement sur le sternum de votre cible, chassant l'air des poumons. Le temps de " +
+        "récupérer son souffle, votre adversaire perd toutes ses actions du prochain tour. ",
+        "5 Votre tir entre et ressort des flancs de votre cible. Jusqu'à ce que la plaie soit bandée, chaque " +
+        "mouvement que fera votre adversaire sera douloureux, et CC, CT -10%. ",
+        "6** Votre tir pénètre profondément dans la partie basse gauche de l'abdomen de votre cible. Tant que la " +
+        "flèche restera en place, la CC et CT -10%. S'il survit au combat son jet d'infection se fera à -10%. ",
+        "7** Votre tir pénètre profondément dans la partie haute gauche de l'abdomen. Tant que la flèche restera " +
+        "en place, la CC et CT -10%. S'il survit au combat son jet d'infection se fera à -20%. Malheureusement " +
+        "la plaie est telle qu'elle ne guérira jamais complètement et continuera d'ennuyer la victime toute sa vie. " +
+        "Si jamais ce résultat est obtenu une deuxième fois, les malus seront doublés !! ",
+        "8** Votre tir pénètre profondément dans la partie basse droite de l'abdomen. Votre cible tombe à terre, " +
+        "horrifiée de constater que des matières fécales s'échappent de l'endroit de la plaie. Test de FM-20% " +
+        "pour se remettre du choc avant d'entamer n'importe quelle action. Si elle survit au combat son jet " +
+        "d'infection se fera à -30%. ",
+        "9** Votre tir pénètre profondément dans la partie haute droite de l'abdomen. Tant que la flèche restera en " +
+        "place, tout mouvement enverra une vague de douleur et de nausée, forçant la victime à effectuer un " +
+        "test de FM-20% pour chaque action tentée. En cas de réussite les actions se font tout de même à -20%. " +
+        "S'il survit au combat sans guérison magique, il devra faire un test d'E-20% ou souffrir de manière " +
+        "permanente -5%E due aux effets persistants de la plaie. ",
+        "10* Votre tir fracasse la clavicule. Votre cible tombe à genoux, étourdit par la douleur et incapable de " +
+        "faire la moindre action pendant 1d10 tours. Tant que la flèche restera en place, l'hémorragie se " +
+        "poursuit : 10% de chance de mourir par tour jusqu'à la guérison. ",
+        "11* Votre tir pénètre profondément dans le ventre et émerge dans le dos, lacérant l'artère rénale. Au début " +
+        "du prochain tour, toutes les caractéristiques de combat (CC, CT, F, E) -10% cumulatif à cause de " +
+        "l'hémorragie interne. Si une des caractéristiques tombe à 0, la cible tombe inconsciente et mourra dans " +
+        "1d10 tours si aucune guérison n'est obtenue avant. ",
+        "12* Votre tir perfore la poitrine, crevant un poumon. Chaque respiration produira un bruit de suçon " +
+        "étrange. Chaque action tentée se fera -30% et la victime aura 5% de chance cumulatif de mourir " +
+        "chaque tour, à moins d'être guérie. ",
+        "13* Votre tir fracture une côte basse et déchire le diaphragme. La respiration de votre cible devient faible " +
+        "et saccadée alors qu'il essaye de respirer. Toutes les actions se font à -30%, et il doit faire un test d'E- " +
+        "20% chaque tour ou tomber inconscient. La guérison magique doit être obtenue dans les 1d10 tours " +
+        "suivants ou la mort sera inévitable. ",
+        "14* Votre tir vient s'insérer profondément dans le ventre pour ressortir dans la colonne vertébrale. Votre " +
+        "cible tombe à terre sans bouger pendant 1d10 tours, et ensuite vomit un liquide bileux avant de mourir. ",
+        "15* Votre tir démolit la plaque du sternum et explose le cœur. Choquée, votre cible s'écroule en toussant " +
+        "un peu de sang avant d'atteindre le sol, raide mort."
+    ],
+    "head": [
+        "1 Votre tir entaille l'oreille de votre cible, causant une douleur vive perturbante. Au prochain tour, CC et " +
+        "CT-10%. ",
+        "2 Votre tir frappe la joue de votre cible, ouvrant une plaie qui se met à saigner plus intensément que " +
+        "prévu. Toutes les tentatives de parade se font à -10% pendant 1d10/2 tours. ",
+        "3 Votre tir écorche le cou de votre cible, ouvrant une plaie qui va gêner votre cible dans sa capacité à se " +
+        "défendre. Pendant toute la durée du combat, tous les coups critiques suivants seront augmentés de +1. ",
+        "4 Votre tir écorche un bout de l'oreille de votre cible, séparant le tiers supérieur de la tête. La douleur se " +
+        "répand à travers le cou, obligeant un test de FM-20% pour éviter de passer toutes les actions du " +
+        "prochain tour à hurler. Il perdra quand même 1⁄2 action. La partie pendra flasque à l'oreille. L'oreille " +
+        "peut être rétablie sur un test de soin-10%, mais il faudra couper la partie supérieure. ",
+        "5 Votre tir écorche le cuir chevelu, ouvrant une plaie faisant couler du sang sur les yeux de l'adversaire. " +
+        "Votre cible perdra l'initiative le prochain tour et verra sa CC et CT-20% jusqu'à ce que la blessure soit " +
+        "bandée. ",
+        "6 Votre tir découpe un gros morceau de chair de la joue de votre cible, exposant l'os maxillaire en " +
+        "dessous. La cible doit réussir un test de FM-20% ou elle ne pourra faire qu'une action de parade à -" +
+        "10% le tour prochain. Elle doit recommencer tant qu'elle ne réussit, le malus diminuant. ",
+        "7 Votre tir entre par un bord du visage et tranche le nez de votre adversaire. Il pend alors du visage par un " +
+        "peu de peau. Du sang s'en écoule et tant qu'il n'y a pas eu de bandage, la cible va perdre 1⁄2 action à " +
+        "essuyer le sang ou perdre le prochain round à vomir. Toutes les actions subissent -10% jusqu'à la " +
+        "guérison. Suite à la perte de son nez, la victime subira -10% Soc mais +5% aux tests d'intimidation. ",
+        "8* Votre tir entre dans le cou et s'enfonce profondément. Etrangement, il n'y a que peu de sang et la " +
+        "flèche semble avoir manqué les veines et artères principales. Tant que la flèche reste en place, toutes " +
+        "les actions se feront à -15%. L'enlever sans la compétence Chirurgie requiert un test d'Ag-30%. Rater " +
+        "ce test augmentera les risques d'infection. S'il est raté de 30, alors vous avez touché une artère " +
+        "principale et il faudra réussir un test de Soin-20% ou mourir. Suite à cet évènement, faire un test de " +
+        "FM pour éviter de gagner 1PF. ",
+        "9 Votre tir endommage sévèrement l'oreille de votre cible, elle tombe sur le sol dans un bruit sourd. Le " +
+        "sang s'écoule en abondance (hémorragie), toutes les actions sont à -20% jusqu'à obtenir la guérison. Si " +
+        "elle survit, elle aura -5% Soc. Ses tests de perception dus à l'audition subiront un -20%. ",
+        "10* Votre tir atteint la mâchoire de votre cible, brisant 1d10/2 dents. Elle devra perdre une attaque à " +
+        "cracher les fameuses dents. La Soc-1%*nb de dents perdues. ",
+        "11* Votre tir perfore le globe oculaire et vient se loger dans l'os de l'orbite, causant un écoulement d'une " +
+        "substance gélatineuse le long du visage. Toutes les caractéristiques de combat (CC, CT, F, E) sont " +
+        "réduites de -20% et la cible à 10% de chance de mourir suite au choc et à la perte de sang chaque tour, " +
+        "jusqu'à ce qu'elle soit guérie. L'œil est définitivement perdu, et maintenant tous les tests de perception " +
+        "incluant la vue se feront à -20%. ",
+        "12* Votre tir pénètre dans le front de votre cible et émerge au sommet du crâne. La cible tombe sur ses " +
+        "genoux et doit réussir un test d'E-20% ou tomber dans les pommes. Si elle réussi le test, il faudra " +
+        "quand même réussir un test d'E-20% chaque tour pour pouvoir agir et toutes les caractéristiques de " +
+        "combat (CC, CT, F, E) seront diminuées de 30% jusqu'à la guérison. Si elle survit, elle recevra 1d6 PF. ",
+        "13* Votre tir entre à la base de l'œil et ressort dans le bas du crâne. Votre cible tombe inconsciente, tout " +
+        "en perdant beaucoup de sang (5% cumulatif de mourir chaque tour). Seule une guérison magique " +
+        "pourra sauver la cible mais elle ne retrouvera jamais son œil. ",
+        "14* Votre tir fracasse les dents de votre cible et vient se loger à l'arrière du cou, tranchant une corde " +
+        "spinale. La cible tombe sur le sol, mourant 1d10/2 tours plus tard. ",
+        "15* Votre tir pénètre le crâne entre les deux yeux et vient ravager l'intérieur du crâne. Votre cible bascule " +
+        "et tombe, morte avant d'avoir touché terre."
+    ],
+    "leg": [
+        "1 Votre tir écorche le pied de votre cible, causant une plaie douloureuse mais superficielle. Au prochain " +
+        "tour, les parades se font à -10%. ",
+        "2 Votre tir écorche la cheville de votre cible. Au prochain tour, votre cible ne peut que parer alors qu'elle " +
+        "se protège le côté blessé, son M-1. ",
+        "3 Votre tir écorche le tibia de votre cible. Pour les 1d10/2 prochains tours, son M/2 et elle ne peut que " +
+        "parer alors qu'elle est occupée à sauter sur l'autre jambe. Vous bénéficiez d'un +20% si vous tentez un " +
+        "jet de manœuvre durant ce tour. ",
+        "4 Votre tir écorche la rotule de votre cible. Elle doit faire un test de FM-10% pour éviter de laisser tomber " +
+        "son arme, et quelque soit le résultat la victime reste de toute façon aveuglée par la douleur et ne pourra " +
+        "faire aucune action le prochain tour. ",
+        "5 Votre tir écorche la hanche de votre cible, emportant une petite portion de chair. Distraite par la douleur " +
+        "et forcée de garder son côté blessé, votre cible ne peut que parer pendant les 1d6 prochains tours. " +
+        "Toute parade se fait à -10%/ ",
+        "6 Votre tir tranche une partie des doigts de pieds, endommageant 1d6/2 tendons et coupant les os. Le M-1 " +
+        "jusqu'à obtenir une guérison et CC, CT-10% pendant toute la durée du combat. ",
+        "7* Votre tir perfore le pied de votre cible le fichant solidement au sol, forçant votre cible à rester là où " +
+        "elle se trouve. Le M est réduit à 0 et toutes ses actions se font à -10% tant que la flèche reste en place, " +
+        "sans compter qu’un adversaire au corps à corps aura +10% CC. ",
+        "8* Votre tir atterri dans le péroné, le fracturant en plusieurs petits morceaux à l'intérieur du bas de la " +
+        "jambe. M-2 pendant 1d10/2 semaines le temps que la fracture soit complètement guérie. De plus la " +
+        "CC, CT-20% pendant toute la durée du combat. Risque d'infection plus important. ",
+        "9* Votre tir fracasse le tibia de votre cible, qui s'affaisse par terre en grognant. La douleur puissante " +
+        "empêche la victime de tenter la moindre action pendant 1d10/2 tours. En attendant que la fracture " +
+        "guérisse (1d10/2 semaines), la cible ne pourra porter aucun poids sur cette jambe, réduisant son M/2. ",
+        "10* Votre tir fracasse la rotule. Votre cible s'affale au sol et passe les prochains 1d10 tours à agoniser. " +
+        "Pendant les prochaines 1d10/2 semaines, M-1 et tout mouvement effectué par cette jambe nécessite un " +
+        "test d'E pour éviter de vomir. ",
+        "11* Votre tir s'enfonce profondément dans la jambe, fracturant le fémur. Votre cible tombe par terre, " +
+        "tenant désespérément sa cuisse pour empêcher le sang de gicler (hémorragie). M-1 et toutes les actions " +
+        "se font à -20% jusqu'à la guérison. ",
+        "12* Votre tir s'enfonce profondément dans la hanche de votre cible, fracturant le fémur à sa base. M-1 et " +
+        "votre adversaire doit faire un test de FM-30% chaque fois qu'une action est tentée. Si la fracture n'est " +
+        "pas soignée, M-2 de façon permanente (min 1). ",
+        "13* Votre tir s'enfonce profondément dans la hanche, fracturant l'os pelvien. L'hémorragie est importante, " +
+        "se traduisant par 15% de chance de mourir à chaque tour. En plus la cible doit effectuer un test d'E- " +
+        "20% ou tomber dans les pommes. Toute action se fait à -30%. S'il devait survivre, son boitement " +
+        "réduira son M-2. ",
+        "14* Votre tir s'enfonce dans le fémur et transperce l'artère fémorale, arrosant les environs dans une " +
+        "fontaine de sang. Votre cible s'effondre sur le sol. La mort survient lorsque le sang cesse de s'écouler, " +
+        "1d10 tours plus tard. ",
+        "15* Votre tir transperce violemment la jambe de votre cible, pourfendant l'artère, le muscle et une partie " +
+        "de l'os. Le sang est expulsé en torrent de la plaie, la cible titube quelques secondes avant de tomber " +
+        "face contre terre, sans vie."
+    ]
+}
+const blunt = {
+    "arm": [
+
+    ],
+    "body": [
+
+    ],
+    "head": [
+
+    ],
+    "leg": [
+
+    ]
+}
 export const critSources = [
-    { source: "default", label: "Classique" }, { source: "firearm", label: "Armes à feu" },
+    { source: "default", label: "Classique" }, { source: "cutting", label: "Armes tranchantes" },
+    { source: "firearm", label: "Armes à feu" }, { source: "arrow", label: "Flèches" },
+
 ];
 export const critTable = {
-    "default": defaultCrit, firearm,
+    "default": defaultCrit, firearm, cutting, arrow
 }

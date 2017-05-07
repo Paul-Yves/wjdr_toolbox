@@ -14,7 +14,7 @@ const prettyLocalisation = {
     "leg_left": "Jambe gauche",
     "leg_right": "Jambe droite",
     "arm_left": "Bras gauche",
-    "arm_right": "Bras droite",
+    "arm_right": "Bras droit",
 }
 
 class CriticalsDisplayer extends Component {
