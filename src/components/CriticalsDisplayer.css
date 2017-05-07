@@ -15,9 +15,21 @@ div.critDisplayer div.formPart.sliderContainer{
     flex: 0 0 auto;
 }
 div.critDisplayer div.formPart.tableContainer{
-    flex: 10 1 auto;
+    flex: 5 1 auto;
+    width: 50%;
+    background-color: linen;
 }
 
 div.critDisplayer .sliderContainer .rangeslider-horizontal .rangeslider__fill {
     background-color: red;
+}
+div.critDisplayer div.formPart.tableContainer div.critInfo{
+    text-align: left;
+}
+div.critDisplayer div.formPart.tableContainer div.critInfo.current{
+    background-color: #e6b280;
+}
+div.critDisplayer div.formPart.tableContainer div.critLoc{
+    background-color: #e6b280;
+    font-weight: bold;
 }
