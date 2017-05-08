@@ -707,6 +707,434 @@ const arrow = {
 }
 const blunt = {
     "arm": [
+        "1 Votre arme frappe les doigts de votre adversaire, les engourdissant. A son prochain tour, sa CC et CT " +
+        "sont diminués de -10%. ",
+        "2 Votre arme écrase la main de votre adversaire l’obligeant à réussir un test d’E-10% pour ne pas lâcher " +
+        "ce qu’il tenait en main. ",
+        "3 Votre arme martèle le coude de votre adversaire, lui envoyant une décharge électrique dans le bras. Il " +
+        "doit faire un test d’E-20% ou laisser tomber son arme. ",
+        "4 Votre arme se fracasse sur le biceps de votre adversaire, le forçant à réussir un test d’E-30% pour éviter " +
+        "de perdre ce qu’il tenait en main. De plus il verra son BF -1 pendant 1d10 tours. ",
+        "5 Votre arme vient écraser l’épaule de votre adversaire, le forçant à laisser tomber ce qu’il tenait en main. " +
+        "Pour les 1d10 prochains tours, la CC subit -20%. ",
+        "6 Votre arme écrase les doigts de votre adversaire, en fracturant 1d10/2 d’entre eux. Sa CC, CT et Ag " +
+        "sont réduites de 3% par doigt fracturé pendant les 1d10/2 semaines suivantes, à moins d’avoir obtenu " +
+        "une guérison magique. ",
+        "7 Votre arme écrase la main de votre adversaire, fracturant plusieurs métacarpes. La main devient " +
+        "inutilisable à moins qu’elle reçoive des soins. CC et CT se font à -20% le temps que les os se " +
+        "ressoudent dans les 1d10/2 semaines. Réduire l’Ag de -10% pendant cette période (ne touche pas " +
+        "l’initiative). ",
+        "8 Votre arme s’écrase sur le poignet en provoquant un craquement d’os. Tout ce qui se trouve dans la " +
+        "main tombe par terre pendant que celle-ci pend selon un angle étrange. Il devra réussir un test de FM- " +
+        "20% ou être trop absorbé par la douleur pour effectuer la moindre action pendant les 1d10/2 prochains " +
+        "tours. Ensuite réduction de -20% de sa CC et CT. ",
+        "9 Votre arme fracasse l’avant-bras de l’adversaire, fracturant ses os dans un bruit peu rassurant. Il lâche " +
+        "tout ce qu’il avait en main et doit faire un test d’E-10% ou tomber à genoux agonisant, incapable de " +
+        "faire quoi que ce soit excepté gémir pendant 1d10/2 tours. Sur une réussite, l’adversaire verra quand " +
+        "même sa CC et CT réduite de -20% pendant 1d10/2 tours durant tout le temps de la douleur. Sans " +
+        "guérison magique, les os exigeront 1d10/2 semaines pour guérir, pendant ce temps la F/2. ",
+        "10 Votre arme pulvérise le coude de votre adversaire, laissant pendre la partie supérieure du bras dans " +
+        "une mobilité anormale. Ce qui était dans la main tombe par terre et votre adversaire passera ses 1d10 " +
+        "prochains tours à crier de façon inhumaine. Si aucune guérison magique n’est obtenue dans les 1d10h, " +
+        "l’avant-bras sera perdu, réduisant la F/2. [une guérison par chirurgie entrainera malgré tout une " +
+        "baisse de -10% de F, résultant d’une rigidité permanente et d’une atrophie musculaire.] ",
+        "11 Votre coup fracasse l’épaule de votre adversaire, en le disloquant. Une intense vague de douleur le " +
+        "force à passer les 1d10 prochains tours à vomir. Jusqu’à ce qu’un test de soin -20% soit réussi pour " +
+        "réduire la dislocation, le bras ne sert plus à rien. De plus, le bras devra être maintenu replié contre le " +
+        "corps, toute perturbation faisant resurgir la douleur et le paralysant pendant 1d10/2 tours. Même après " +
+        "la guérison, il devra passer 1d10/2 semaines dans une écharpe en subissant -20% à sa CC. ",
+        "12 Votre coup fracasse l’épaule de votre adversaire, démontant le plexus brachial, un ensemble de nerfs " +
+        "nécessaires au bras. Le bras est disloqué et paralysé, rien ne pourra le sauver. Il va lentement dépérir, " +
+        "les muscles s’atrophiant au cours des 1d10 prochaines semaines. F/2 permanente. ",
+        "13 Votre arme démolit l’épaule de votre adversaire, déchirant l’humérus de ses ligaments sur l’omoplate " +
+        "et étourdissant l’adversaire pendant 1d10 tours. Il pend inutile retenu par quelques tendons et muscles " +
+        "le long du corps. Votre adversaire doit faire un test d’E-20% chaque tour pour éviter de tomber " +
+        "inconscient. Il devra être soigné dans les 1d10 prochains tours à cause de l’hémorragie interne. Rien " +
+        "ne sauvera le bras. La CC est réduite de 20% pendant 1d10 semaines due à la persistance de la douleur " +
+        "et à la raideur. Perte définitive de F/2. ",
+        "14 Votre arme brise le bras de l’adversaire, enfonçant plusieurs fragments d’os et de tissus à travers la " +
+        "cage thoracique et les poumons. Choqué, votre adversaire tousse un torrent de sang rouge vif avant de " +
+        "s’effondrer sur le sol. La mort survient 1d10/2 tours plus tard. ",
+        "15 Votre arme démolit l’épaule de votre ennemi, déchirant os et tendons avant de s’écraser à travers la " +
+        "cage thoracique. Il tombe par terre sous la force du coup, est pris d’une brève convulsion, puis cesse " +
+        "de bouger pour toujours."
+    ],
+    "body": [
+        "1 Votre arme ricoche sur l'abdomen de votre adversaire, le repoussant. Pendant le tour suivant votre " +
+        "adversaire perd 1⁄2 action le temps de se remettre. ",
+        "2 Votre arme ricoche sur la cage thoracique de votre adversaire, le forçant à réussir un test d’E-10% pour " +
+        "éviter de subir une pénalité de-10 % à toutes les actions pendant le tour prochain. ",
+        "3 Votre coup frappe votre adversaire carrément dans le plexus solaire, lui coupant le souffle. Pour le " +
+        "prochain tour, la seule action que votre adversaire peut effectuer sera une parade à -20%. ",
+        "4 Votre arme frappe votre adversaire dans l'abdomen, l’obligeant à faire un test d’E-30% pour éviter de " +
+        "passer le prochain round en vomissements. S'il réussit, il ne perd qu’1/2 action. ",
+        "5 Votre coup se brise sur le côté de votre adversaire, au-dessous du bras. Contusion de plusieurs côtes. " +
+        "On considère toutes les actions pendant les 1d10/2 tours suivants à -20%. ",
+        "6 Votre arme entre en collision avec le flanc gauche de votre adversaire, contusionnant sa rate. Comme " +
+        "du sang se perd au niveau de l’organe, votre adversaire subit -5 % cumulatifs par tour à sa CC. Quand " +
+        "elle tombe à 0, votre adversaire doit faire un test d’E-10% chaque tour ou tomber inconscient. ",
+        "7 Votre arme envoie dans un craquement satisfaisant, un coup solide au niveau de sa cage thoracique. On " +
+        "considère toutes les actions de votre adversaire à -20% pendant 1d10 tours à cause de la contusion. ",
+        "8 Votre arme entre en collision avec l'aine de votre adversaire, le mettant à genoux dans un cri aigu. On " +
+        "considère votre adversaire impuissant pendant les 1d10/2 tours suivants, frappé d'incapacité et aveuglé " +
+        "par la douleur. Si votre adversaire réchappe de la bataille, il doit faire un test d’E-10% ou être rendu " +
+        "impuissant. Si c’est une femme, un test d’E peut réduire l’incapacité à 1 tour seulement. ",
+        "9 Votre coup frappe durement l’abdomen de votre adversaire, chassant l’air de ses poumons. Votre " +
+        "adversaire doit faire un test FM-20% pour éviter de s'enfuir du combat immédiatement. S’il reste, " +
+        "pendant 1d10 tours tous ses tests se feront à -20%. Un test d’E-20% doit aussi être réalisé pour éviter " +
+        "de se chier dessus. ",
+        "10 Votre arme entre en collision avec le côté de votre adversaire, forçant plusieurs côtes vers des organes " +
+        "internes. Perte de sang par hémorragie. Il tombera inconscient à la fin de 1d10 rounds. La perte de " +
+        "sang continue et à moins d’être sauvé dans les 1d10+2 tours suivants, il mourra.",
+        "11 Votre coup se brise dans le milieu de la clavicule de votre adversaire, la brisant en deux. Il y a une " +
+        "chance de 50 % qu'un des fragments perfore un poumon. Si cela arrive, la guérison magique doit être " +
+        "obtenue dans 1d10 tours ou la mort sera inévitable. Si le poumon n'est pas perforé, réduisez toutes les " +
+        "caractéristiques de combat (CC, CT, F, E) de -20 % jusqu'à la guérison. ",
+        "12 Votre adversaire se tord pour éviter votre coup, mais le coup lui fracture le dos et son épine dorsale. " +
+        "Votre adversaire tombe par terre, incapable de bouger ses jambes. On considère ses nouvelles attaques " +
+        "et parades à -30 %. L’hémorragie interne la force à réaliser un test d’E -20% à chaque round pour " +
+        "éviter de tomber dans les pommes. Si aucune guérison magique n'est obtenue dans 1d10 tours, votre " +
+        "adversaire meurt. Si votre adversaire survit, il sera paralysé de la taille jusqu’aux jambes (M=0), il " +
+        "recevra 1d6 PF et sera tourmenté par des cauchemars récurrents le forçant à revivre le trauma. ",
+        "13 Votre coup atterrit avec un craquement retentissant contre le sternum de votre adversaire, le fracturant " +
+        "tout en compressant son cœur au-dessous. À l'insu de votre adversaire, la force du coup a lacéré une de " +
+        "ses artères coronaires. Comme le sang remplit le sac péri cardial, votre adversaire perdra -15% " +
+        "cumulatifs à toutes ses caractéristiques de combat (CC, CT, F, E) chaque tour. Quand une de ces " +
+        "caractéristiques tombe au-dessous de 0, l'adversaire tombe par terre, mort. ",
+        "14 Votre coup se brise dans la poitrine de votre adversaire, défonçant le sternum et déchirant les tissus " +
+        "des poumons. Votre adversaire est rejeté en arrière, stupéfié, tousse en rejetant un liquide sombre " +
+        "écumeux puis s’écroule inconscients. La Mort est inévitable dans les 1d10/2 tours suivants. ",
+        "15 Votre coup s’enfonce profondément dans la poitrine de votre adversaire. Un test d’(Ag+F)/2-10% " +
+        "pour réussir à retirer votre arme de la cavité thoracique de votre adversaire mort."
+    ],
+    "head": [
+        "1 Votre arme percute le côté de la tête de votre adversaire, lui causant une surdité passagère ainsi qu’un " +
+        "peu de bruit, ce qui réduit sa CC de -10% pendant 1d6/2 tours. ",
+        "2 Votre coup percute l’os de la joue de votre adversaire lui faisant perdre ses attaques au prochain tour. Il " +
+        "gagnera aussi un œil au beurre noir pendant 1d10 jours. ",
+        "3 Votre arme percute le nez de votre adversaire, ce qui lui amène les larmes aux yeux de douleur. Il subit " +
+        "une réduction de CC de -10% pendant 1d10/2 tours. ",
+        "4 Votre arme se fracasse sur la viande du cou de votre adversaire, mettant à rude épreuve les muscles " +
+        "trapèzes. Pendant 1d10/2 tours, sa CC sera diminuée de -20%. ",
+        "5 Votre arme écrase une des oreilles de votre adversaire, pulvérisant son tympan par la même occasion. Il " +
+        "devra faire un test d’E pour éviter un vertige (tombe à terre et y reste un nombre de tours BE/2), puis " +
+        "un test de FM-10% ou passer le prochain round à hurler de douleur alors que du sang s’écoule de ce " +
+        "côté de la tête. Pendant 1d10/2 semaines, tous ses tests liés à l’audition subiront un malus de 20%. Un " +
+        "test d’E sera nécessaire à la fin de cette période pour savoir si le tympan s’est refait ou si l’oreille est " +
+        "définitivement perdue. ",
+        "6 Votre coup frappe le côté de la tête d’un choc inquiétant. Votre adversaire tombe au sol et doit faire un " +
+        "test d’E-20% à chaque round ou avoir la tête qui tourne en train de compter les chandelles. A la fin du " +
+        "combat, il aura la possibilité de faire un test d’E-10% ou souffrira d’une amnésie (à moins d’une " +
+        "guérison magique). ",
+        "7 Votre arme fracture le nez de votre adversaire, l’obligeant à faire un test d’E-20% pour éviter de passer " +
+        "les 1d10/2 prochains tours à cracher du sang. Une réussite signifie qu’il n’est juste étourdi que pendant " +
+        "1 tour. S’il laisse le nez guérir naturellement, il subira un -5% en Soc. ",
+        "8 Votre coup vient rencontrer la mâchoire de votre adversaire, lui brisant 1d10 dents. Il recrachera ses " +
+        "dents au tour d’après ce qui lui enlèvera 1⁄2 action. Soc -1%*nb de dents. ",
+        "9 Votre arme vient frapper la mâchoire de votre adversaire, la disloquant. Toutes ses caractéristiques de " +
+        "combat (CC, CT, F, E) subissent -20% à cause de la douleur et tout nouveau coup critique verra sa " +
+        "sévérité augmenté de +1 jusqu’à la guérison. Il devra se faire soigner pour pouvoir reparler. ",
+        "10 Votre arme fracasse le cou de votre adversaire, ricochant sur la trachée. Pour le reste du combat, votre " +
+        "adversaire n’émet plus que des glapissements alors qu’il halète pour reprendre son souffle. Doit faire " +
+        "un test d’E-20% chaque tour ou perdra -10% cumulatif à ses caractéristiques de combat (CC, CT, F, " +
+        "E). Si une caractéristique atteint 0, il tombe au sol inconscient. ",
+        "11 Votre arme écrase l'orbite de votre adversaire, causant une fracture. Votre adversaire perd " +
+        "connaissance et l’hémorragie ne s’arrêtera pas tant qu’il n’aura pas reçu une assistance médicale. Si " +
+        "une guérison magique n’est pas donnée dans les 1d10h, il perdra son œil. Faire un test d’E-20% pour " +
+        "éviter toute infection. ",
+        "12 Avec un étrange bruit de gong, votre coup fait tourner la tête de votre adversaire selon un angle " +
+        "étrange, forçant l'épine à la jointure du crâne. Votre adversaire tombe inconscient et mourra si la " +
+        "guérison magique n'est pas obtenue dans les 1d10/2h. Si la guérison magique est obtenue, le " +
+        "personnage doit faire un Test d’E-30% ou faire face à la paralysie permanente à partir du cou " +
+        "jusqu’aux pieds. Le test réussi évitera au personnage d’être paralysé, mais il subira une perte de -10 % " +
+        "permanente à son Int, FM et Soc à cause de dégâts cérébraux. ",
+        "13 Votre arme enfonce le côté de la tête de votre adversaire, causant une hémorragie interne. " +
+        "Étonnamment, le seul résultat perceptible est un saignement de nez mineur. Votre adversaire ne subit " +
+        "aucune pénalité et peut agir normalement pendant 1d10/2 tours, à la fin de ceux-ci il tombera " +
+        "soudainement raide mort. ",
+        "14 Vous fracassez complètement le crâne de votre adversaire dans un craquement écœurant. La Mort est " +
+        "inévitable et votre adversaire passe les 1d10 prochains tours en convulsions au sol, après quoi il meurt. ",
+        "15 Votre arme écrase et ouvre le crâne de votre adversaire comme une coquille d'œuf, éclaboussant les " +
+        "alentours (ou les deux personnages) de sang et de cervelle. La Mort est immédiate."
+    ],
+    "leg": [
+        "1 Votre coup ricoche sur le genou de votre adversaire, le déséquilibrant. Sa CC sera réduite de -10% au " +
+        "prochain tour. Si votre adversaire survit, il pourra sentir son genou se raidir lorsque le climat deviendra " +
+        "humide ou avant une tempête. ",
+        "2 Votre arme ricoche sur la hanche de votre adversaire, le forçant à réussir un test d’Ag-10 % afin d'éviter " +
+        "de tomber sans cérémonie sur les fesses. En cas de réussite, il ne perdra qu’1/2 action. ",
+        "3 Votre coup frappe le bord du genou de votre adversaire, le tordant vers l'intérieur. Réduisez sa CC-20% " +
+        "pendant le prochain tour pendant qu’il essaye d'éviter de se soutenir sur cette jambe. Il ne pourra pas " +
+        "courir. ",
+        "4 Votre coup ricoche sur le tibia de votre adversaire. Il doit réussir un test FM-30% pour éviter de laisser " +
+        "tomber son arme et de perdre ses actions pour le prochain tour, alors qu’il saute sur une jambe en se " +
+        "tenant l’autre de douleur. Vous bénéficiez d'un +20% si vous tentez un jet de manoeuvre durant ce " +
+        "tour. ",
+        "5 Votre coup échoue dans la viande de la cuisse de votre adversaire, le forçant à se mettre à genoux. Votre " +
+        "adversaire doit réussir un test d’Ag-20% le premier tour puis Ag-10%, etc. pour pouvoir se relever. " +
+        "Une fois qu’il se relève, pendant 1d10/2 tours votre adversaire ne pourra effectuer qu’1/2 action et ses " +
+        "parades se feront à -10%. ",
+        "6 Votre arme entre en collision avec la hanche de votre adversaire, l'obligeant à toucher terre. Il sera " +
+        "incapable de trouver son appui pendant 1d10/2 rounds durant lesquels toutes ses actions sont à -20 %. ",
+        "7 Votre coup se brise dans le pied de votre adversaire, fracturant son grand orteil. Votre adversaire " +
+        "regarde son pied puis vous regarde et ensuite test de FM -20% ou voudra quitter le combat avec un " +
+        "score de M-1. S’il reste toutes ses actions pendant 1d10 tours se feront à -20% ",
+        "8 Votre coup écrase le pied de votre adversaire, fracturant plusieurs métatarses. Votre adversaire tombe " +
+        "par terre, incapable de se relever car il ne peut plus porter de poids sur son pied blessé. Pendant ce " +
+        "temps, on considère sa CC-20% et M-2. ",
+        "9 Votre coup brise la cheville de votre adversaire et il s'effondre sans cérémonie par terre. Votre " +
+        "adversaire doit faire un test FM-30% pour éviter ne de faire rien d'autre que de saisir sa cheville en " +
+        "poussant des cris perçants pendant 1d10/2 tours. Indépendamment du résultat, le score de M/2 et " +
+        "toutes les caractéristiques de combat (CC, CT, F, ET) sont réduites de 10 % pour le reste de combat. ",
+        "10 Votre arme brise le tibia de votre adversaire et il s'effondre en boule, se roulant par terre pendant " +
+        "1d10/2 tours. Aveuglé par la douleur, il ne peut faire aucune action pendant tout ce temps. Même si " +
+        "votre adversaire en réchappe son M-1 définitivement. ",
+        "11 Votre coup lui brise la rotule. Votre adversaire s’affale par terre en saisissant son genou en poussant un " +
+        "cri. Il est frappé d'incapacité pour le reste de combat et la douleur est si intense qu'il doit faire un test " +
+        "de FM-20% immédiat ou il perdra la contrôle de sa vessie. Si votre adversaire en réchappe, il perdra " +
+        "définitivement 1 en M. ",
+        "12 Votre coup percute violemment le milieu de la jambe et d’un \"coup sec\" audible, la courbure de " +
+        "l'articulation de votre adversaire s’en va dans la mauvaise direction. Il s'effondre, frappé d'incapacité " +
+        "et de douleur et doit faire un test d’E-30% chaque round ou tomber dans les pommes. Si la guérison " +
+        "n'est pas obtenue dans 1d10h, la jambe au-dessous du genou sera perdue. Réduisez le M/2, de manière " +
+        "permanente. ",
+        "13 Votre coup entre en collision avec la viande de la cuisse de votre adversaire, fracturant le fémur et " +
+        "lacérant l'artère fémorale. Votre adversaire s'effondre en boule, inconscient et sa jambe devient " +
+        "pourpre, se gonflant visiblement sous ses yeux. La Mort arrivera si aucune guérison n'est obtenue dans " +
+        "1d10 tours. Rien ne peut sauver la jambe, M=1 de façon permanente car doit se trainer la jambe morte. ",
+        "14 Votre coup pulvérise la hanche de votre adversaire, conduisant violemment le fémur hors de son " +
+        "logement. Votre adversaire s'effondre à terre; un grand os lisse orné de tendons râpés s’avance " +
+        "inélégamment des ruines de sa hanche. La poitrine continue de se soulever au milieu d’une mare de " +
+        "sang qui s’étend rapidement, jusqu'à ce que la mort arrive au bout d’1d10/2 tours. ",
+        "15 Votre arme écrase complètement le bassin de votre adversaire, fracturant et conduisant les grands " +
+        "tessons d'os dans l'aorte descendante. Votre adversaire s'effondre à terre et meurt peu de temps après " +
+        "dans gémissement bref, des gargouillis s’échappant de ses lèvres."
+    ]
+}
+const fire = {
+    "arm": [
+        "1 Les flammes chauffent la main de votre cible, lui causant des ampoules et -10% CC jusqu'à la fin du " +
+        "prochain tour. ",
+        "2 Les flammes lèchent le bras supérieur de votre cible, envoyant un souffle d'air chaud au visage, lui " +
+        "causant -20% CC jusqu’à la fin du prochain tour. ",
+        "3 Les flammes lèchent le bras de votre cible, enflammant tout vêtement présent sur ce bras. Chaque " +
+        "tentative pour tenter d’éteindre en remuant le bras fera perdre 1⁄2 action et nécessitera un test d’Ag - " +
+        "10% réussi. La cible devra dépenser ses 1⁄2 actions uniquement de cette manière jusqu’à réussir à " +
+        "éteindre le feu. Le manque de vêtements ou de fourrure l’étourdira pendant 1d10/2 tours, causant une " +
+        "brûlure superficielle. ",
+        "4 Les flammes enflamment tout le bras de votre cible, causant des brûlures assez sérieuses lui donnant - " +
+        "10% à tous ses tests à ce bras jusqu’à la fin du combat. Ses vêtements prennent feu (cf #3 ci-dessus). ",
+        "5 La main s’enflamme telle une torche vivante, faisant tomber tout ce qui est tenu en main. Cette main " +
+        "sera inutilisable pendant toute la durée du combat et il devra réussir un test d’E ou subir un -10% à " +
+        "tous ses tests nécessitant une manipulation habile, en raison des lésions et autres cicatrices résultant de " +
+        "la brûlure. ",
+        "6 Les flammes brûlent les vêtements de votre cible, envoyant des lambeaux noircis dans le ciel, causant " +
+        "assez de douleur au niveau des brûlures pour l’étourdir pendant 1d10/2 tours et -10% CC, Ag et F " +
+        "permanent avec ce bras, à moins qu’une guérison magique soit obtenue. ",
+        "7 Les flammes brûlent une partie du muscle entre l’omoplate et le haut du bras. Le bras sera inutilisable " +
+        "pour le reste du combat, et à moins qu’il reçoive une guérison magique il subira un -20% permanent " +
+        "en CC et F pour toutes les actions effectuées avec ce bras. ",
+        "8 Un jet de flammes saisit les muscles de l'épaule de votre cible, rendant le bras inutilisable jusqu'à la fin " +
+        "du combat. De plus, les vêtements de la cible prennent feu, le forçant à laisser tomber ce qu’il tient en " +
+        "main pour combattre les flammes en essayant de les éteindre. Chaque tentative pour tenter d’éteindre " +
+        "en remuant le bras fera perdre 1⁄2 action et nécessitera un test d’Ag -20% réussi. La cible devra " +
+        "dépenser ses 1⁄2 actions uniquement de cette manière jusqu’à réussir à éteindre le feu. Se rouler par " +
+        "terre peut aider, le test ne se faisant plus qu’à -10%. Le manque de vêtements ou de fourrure " +
+        "l’étourdira pendant 1d10/2 tours, causant une brûlure superficielle. Le bras subira ensuite les pénalités " +
+        "#6 ci-dessus. ",
+        "9 Le bras entier de votre cible est englouti sous les flammes, l’étourdissant pendant 1d10/2 tours et " +
+        "rendant son bras inutile pour le reste du combat. La douleur est rapidement remplacée par une " +
+        "sensation d’engourdissement, en raison des terminaisons nerveuses qui ont été carbonisées. Les dégâts " +
+        "au muscle et aux tendons, tout comme la contractions suite à la cicatrice massive aboutiront à une " +
+        "pénalité permanente de -20% CC, Ag et F pour n’importe quel test fait avec ce bras. ",
+        "10 Des flammes chauffées à blanc transforment les doigts de votre cible en souches carbonisée, " +
+        "l’étourdissant pendant 1d10 tours. La main est perdue de manière permanente. ",
+        "11 Les flammes carbonisent le coude de votre cible, fusionnant muscles et tendons. Le bras devient " +
+        "inutilisable, et en raison de la perte massive de peau et d'autre tissu, le rend très susceptible à " +
+        "l'infection et la gangrène. À moins que la peau ne soit régénérée dans les 1d10 jours, exigeant une " +
+        "guérison magique pour éviter l’amputation. ",
+        "12 Un jet de feu enflamme et brûle tout l’avant-bras jusqu’au coude, étourdissant votre cible pour 1d10 " +
+        "tours, lui causant -20% à tous ses tests pour le reste du combat. ",
+        "13 Les flammes engloutissent le bras entier de votre cible, lui cuisant les muscles sans compter une partie " +
+        "des cheveux roussis. Une odeur de viande cuite se dégage, la cible est impuissante pendant 1d10 tours " +
+        "et lui demandant de réussir un test de FM -10% pour ne pas perdre conscience. Les restes du bras " +
+        "devront être amputés. ",
+        "14 Une boule de feu s’écrase sur l'épaule de votre cible, le brûlant jusqu’à l'os et roussissant un côté du " +
+        "visage. La vague de chaleur arrivant de ce bord fait bouillir le poumon. La cible tombe au sol, " +
+        "impuissante face au choc et expire inévitablement après 1d10/2 tours. ",
+        "15 Le bras s’embrase dans un incendie alors que la boule incandescente gagne une partie du torse et " +
+        "enflamme le reste des vêtements. La victime tombe lourdement au sol, son bras réduit à l’état de " +
+        "souche carbonisée, le reste du côté de son corps continuant de brûler encore pendant 1d6 tours."
+    ],
+    "body": [
+        "1 Les flammes roussissent les poils de la cible, causant -10% CC jusqu’à la fin de son prochain tour. ",
+        "2 Les flammes lèchent le torse de votre cible, lui causant -20% CC jusqu’à la fin de son prochain tour. ",
+        "3 Une boule de feu heurte le ventre de votre cible, l’étourdissant jusqu’à la fin de son prochain tour. ",
+        "4 Les vêtements de votre cible commencent à s’enflammer, de la fumée et des flammeroles s’en " +
+        "échappant. Votre cible doit laisser tomber ce qu’elle a en main pour taper sur les flammes et éviter le " +
+        "début d’incendie, exigeant 1⁄2 action et un test d’Ag réussi pour y arriver. La cible devra dépenser ses " +
+        "1⁄2 actions uniquement de cette manière jusqu’à réussir à éteindre le feu. Le manque de vêtements ou " +
+        "de fourrure étourdira pendant 1d10/2 tours, causant une brûlure superficielle. ",
+        "5 Le feu engloutit le torse de votre cible, enflammant ses vêtements. Il devra se jeter à terre pour s’y " +
+        "rouler afin d’essayer d’éteindre les flammes, dépensant 1 action complète et un test d’Ag -10%. La " +
+        "cible devra dépenser ses 1⁄2 actions uniquement de cette manière jusqu’à réussir à éteindre le feu. Le " +
+        "manque de vêtements ou de fourrure l’étourdira pendant 1d10 tours, causant une brûlure superficielle. ",
+        "6 Les vêtements de la cible prennent feu (cf #5 ci-dessus), mais les flammes hautes arrivent à faire " +
+        "prendre feu à ses cheveux, l’aveuglant temporairement. Il sera compté comme impuissant jusqu’à la " +
+        "fin de son prochain tour et pourra alors commencer à essayer d’éteindre les flammes. De plus, les " +
+        "ampoules et les brûlures causeront -10% à tous ses tests jusqu’à la fin du combat. ",
+        "7 La poitrine de votre cible est méchamment brûlée, roussissant les muscles. Il subira -20% CC, CT, Ag, " +
+        "F jusqu'à la fin du combat. À moins qu’il soit soigné magiquement, sa F sera réduite de manière " +
+        "permanente de -10% à cause des dommages aux muscles irréparables. ",
+        "8 Un jet de flammes frappe votre cible dans le dos, brûlant la chair à l'os et exposant une vertèbre à " +
+        "travers la chair roussie. Il subira -30% à tous ses tests jusqu'à la fin du combat et subira ensuite -15% " +
+        "après le combat jusqu’à ce que cette blessure soit guérie (1d10 jours). De plus, en raison de la perte de " +
+        "peau et de l'os exposé, il devra réussir un test d’Infection à -20% ou mourir par septicémie dans les " +
+        "1d10 jours suivants, à moins de recevoir un sort de guérison de Shallya. ",
+        "9 Le feu engloutit votre cible, avec les effets #5 ci-dessus, le test d’Ag se faisant à -20% et le risque " +
+        "d’infection sera comme au #8 ci-dessus. ",
+        "10 Une boule de feu percute la poitrine de votre cible. Au moment de sa respiration, l’inhalation des " +
+        "flammes vient lui brûler les voies aériennes et les poumons. Elle comptera comme impuissante pour " +
+        "les 1d10/2 prochains tours et devra réussir un test d’E -20% ou ses poumons enfleront et elle " +
+        "suffoquera jusqu’à la mort 2d10 tours plus tard. Seule une guérison magique peut la sauver, en " +
+        "diminuant le gonflement. Si elle survit, elle subira une pénalité permanente de -15% E et F en raison " +
+        "de la capacité réduite de ses poumons. De plus elle gagne 1PF à cause du traumatisme. ",
+        "11 Une boule de feu vient frapper le ventre de votre cible, un fin jet de flamme passant la plaque " +
+        "abdominale pour aller toucher une partie de l'intestin grêle. La cible tombe au sol et est considérée " +
+        "comme impuissante et à l’agonie pendant 1d10 tours. Elle mourra dans les 2d10h à moins qu’elle ne " +
+        "reçoive une guérison magique (sort à -30% à cause de la destruction d’une partie des boyaux). ",
+        "12 Une explosion de flamme déchire la poitrine de votre cible, brûlant ses chairs et exposant les côtes en " +
+        "dessous. Elle doit réussir un test de FM -10% ou tomber au sol inconsciente. En cas de réussite, elle " +
+        "sera juste impuissante pendant 1d10 tours et subira -30% à tous ses tests jusqu’à ce qu’elle soit guérie " +
+        "complètement (2d10 jours). Après, elle subira une réduction permanente de -20% en CC, CT, Ag, F et " +
+        "E, en raison de la perte massive de chair. Voir #8 pour le risque d’Infection. Une guérison magique à - " +
+        "30% couronnée de succès permettra de réduire à -10% cette pénalité. ",
+        "13 Un jet de flammes vient percuter et brûler la colonne vertébrale de votre cible, la paralysant de " +
+        "manière permanente de la taille jusqu’aux jambes. Elle comptera comme impuissante à cause du choc " +
+        "pendant 1d10 tours et subira un risque d’Infection comme au #8 ci-dessus. ",
+        "14 Un jet de flammes vient brûler la cage thoracique de votre adversaire en profondeur, réduisant ses " +
+        "poumons en cendres et faisant remonter une partie du feu par la bouche. Il meurt avant de toucher le " +
+        "sol. ",
+        "15 Une énorme boule de feu percute la poitrine de votre cible, l'explosion incendiaire l’engloutie alors " +
+        "entièrement, consumant chair et vêtement, roussissant son crâne et une grand partie de ses membres, " +
+        "laissant à l’état de cendre une bonne partie de sa cage thoracique et ses côtes."
+    ],
+    "head": [
+        "1 Le feu vient lécher une de ses joues, formant des petites cloques, lui causant -10% CC au prochain tour. ",
+        "2 Les cils et sourcils de votre cible sont légèrement brûlés alors qu’elle se jette en arrière en fermant les " +
+        "yeux pour éviter les flammes, causant -20% CC jusqu’à la fin du prochain tour. ",
+        "3 Etourdi jusqu'à la fin de son prochain tour, occupé à se taper frénétiquement le cuir chevelu pour " +
+        "éteindre sa chevelure. Il devra réussir un test de FM pour éviter de lâcher ce qu’il tient dans l’autre " +
+        "main (ou alors il utilisera ses 2 mains pour éteindre les flammes). Le manque de cheveux et les " +
+        "cloques lui donneront un malus de -10% Soc, à moins de recevoir rapidement des soins magiques ou " +
+        "de se faire installer une perruque de bonne qualité (qualité moyenne entraînera -5% en Soc). ",
+        "4 Votre cible est temporairement aveuglée d’un oeil, réduisant CT et CC de -10% pour le reste du " +
+        "combat. Un borgne aura 50% de chance de toucher le bon côté. Si jamais cela venait à toucher son " +
+        "dernier œil, alors il serait complètement aveuglé et serait considéré comme impuissant. ",
+        "5 Un côté du visage de votre cible est salement brûlé, manquant de peu son oeil. Elle sera étourdie " +
+        "jusqu'à la fin de son prochain tour et devra réussir un test de FM -20% pour éviter de lâcher ce qu’elle " +
+        "tient dans au moins une de ses mains afin de l’amener à son visage. La grosse cicatrice et les " +
+        "boursouflures résultant de ces dégâts réduiront de façon permanente sa Soc -2d10. ",
+        "6 Une des oreilles de votre cible est touchée, la joue et le cuir chevelu brûlés, seront couverts de cloques. " +
+        "Elle doit réussir un test de FM ou laisser tomber son arme (#3) et sera étourdie jusqu'à la fin de son " +
+        "prochain tour, exigeant un autre test de FM pour se remettre. De plus, après le combat elle devra " +
+        "réussir un test d’E -10% ou perdre l’audition de ce côté (-20% à tout test de perception impliquant " +
+        "l’audition). Enfin sa Soc subira -10% définitivement à cause des horribles cicatrices. ",
+        "7 Les flammes roussissent le menton de votre cible et sa mâchoire inférieure. Elle sera étourdie pendant " +
+        "1d10 tours et subira -10% à tous ses tests pendant le reste du combat à cause de l’inhalation du souffle " +
+        "chaud lui brûlant l’intérieur de la bouche et des voies aériennes supérieures. Sa Soc subira -10% " +
+        "permanent (horribles lésions cicatricielles et problème pour ouvrir la bouche correctement). ",
+        "8 Une explosion de flamme brûle les organes vocaux de votre cible, la rendant définitivement muette et " +
+        "l’étourdissant pendant 1d10/2 tours. Elle subira -20% à tous ses autres tests pendant le reste du combat " +
+        "en raison de ses difficultés pour respirer par une trachée roussie. Sa Soc sera définitivement divisée " +
+        "par 2, le personnage n’étant plus capable de communiquer normalement tout en émettant un souffle " +
+        "grinçant persistant à chaque respiration. ",
+        "9 Un jet de flammes brûle le cuir chevelu de votre cible jusqu’à l'os, la forçant à réussir un test d’E -20% " +
+        "ou tomber au sol à cause du choc de la chaleur au cerveau. Elle subira -20% à tous ses tests pendant " +
+        "2d10 tours, à cause de la douleur et des vertiges. Après le combat, la perte de la peau entraînera un test " +
+        "d’E pour éviter une infection la laissant impuissante et délirante pendant 1d10 jours à l’issue desquels " +
+        "elle devra refaire un test d’E pour éviter de mourir. Tout sort de Shallya réussi traitera l’infection et " +
+        "permettra la repousse de la peau, évitant l’effet suivant : à cause de l’os mis à nu et de l’impossibilité " +
+        "pour la peau de repousser à cet endroit, toute exposition à une nouvelle infection (traversée de marais " +
+        "ou sommeil dans une grange sale) l’obligera à faire un nouveau test. ",
+        "10 Une boule de feu atteint le visage de votre cible, la brûlant horriblement. Elle comptera comme " +
+        "impuissante pour le reste du combat. Sa Soc subira -20% permanent et elle devra réussir un test d’E " +
+        "pour chaque œil pour conserver la vue. La guérison magique ne restaurera pas la vision mais divisera " +
+        "la pénalité de Soc par 2. ",
+        "11 Une explosion de flamme dessèche un bord de la tête de votre cible. Appliquez les plus mauvais " +
+        "résultats des #7, #9 et #10 ci-dessus. ",
+        "12 Un jet de flammes enflamme l’arrière de la tête, faisant pratiquement bouillir le cerveau de votre " +
+        "cible. Appliquez le risque d'infection #9 ci-dessus, en sachant qu’elle tombera au sol inconsciente et se " +
+        "réveillera avec une nouvelle folie à son réveil, 1d10/2 jours plus tard en raison des dégâts cérébraux. ",
+        "13 Des flammes brûlantes déchirent le cou de la cible, lui faisant frire la moelle épinière. Elle devra " +
+        "réussir un test d’E -20% ou mourir au bout d’1d10/2 tours de dégâts cérébraux et d’un problème de " +
+        "maîtrise respiratoire. Si elle survit, elle sera paralysée du cou jusqu’aux jambes. De plus, il aura 50% " +
+        "de chance de subir les résultats en #8, à cause des flammes ayant atteint cet endroit. ",
+        "14 L'incendie engloutit la tête de votre cible, faisant bouillir son cerveau dans son crâne et réduisant tout " +
+        "ce qui dépasse à l’état de souche carbonisée. La mort survient 1 tour plus tard. ",
+        "15 Une explosion de feu réduit la tête de votre cible à un nuage graisseux de fumée, ne laissant subsister " +
+        "qu’une souche noircie au dessus de son cou. Le reste de son corps tombant mollement au sol."
+    ],
+    "leg": [
+        "1 Une flamme vient lécher la jambe de votre cible, -10% CC jusqu’à la fin de son prochain tour. ",
+        "2 Des flammeroles viennent lécher la jambe et la hanche de votre cible, causant -20% CC jusqu'à la fin " +
+        "de son prochain tour. ",
+        "3 Les chaussures de votre cible prennent feu sous l’impact, la forçant à dépenser 1⁄2 action et à réussir un " +
+        "test d’Ag alors qu’elle tamponne par terre furieusement pour faire cesser l’incendie. Elle sera " +
+        "incapable d’effectuer toute autre action jusqu’à ce que le feu soit éteint. Si elle n’a pas de chaussure ou " +
+        "si elle n’arrive pas à éteindre le feu en 3 tours, alors son pied est brûlé, se recouvrant d’ampoules, " +
+        "l’étourdissant jusqu’à la fin de son prochain tour alors qu’elle hurle de douleur. ",
+        "4 Les pantalons de votre cible prennent feu, la forçant à laisser tomber tout ce qu’elle tient dans ses " +
+        "mains, elle devra perdre 1⁄2 action et réussir un test d’Ag -10% pour arriver à éteindre le feu. Si elle n’a " +
+        "pas de pantalon ou si elle n’arrive pas à éteindre le feu au bout de 3 tours, alors sa cuisse sera brûlée " +
+        "et recouverte d’ampoules, lui donnant -10% CC jusqu’à la fin du combat. ",
+        "5 Le dos de la jambe de votre cible et ses fesses se font brûler, endommageant et paralysant les tendons à " +
+        "l'arrière du genou. Elle est étourdie jusqu’à la fin de son prochain tour et elle subira ensuite M-2 et - " +
+        "20% à ses esquives jusqu’à la fin du combat. A moins que la blessure soit guérie magiquement, la " +
+        "moitié du malus subsistera de manière permanente en raison des contractions difficiles du aux lésions. ",
+        "6 La plupart de la peau sur le devant de la jambe est brûlée, mettant le feu à tout pantalon (cf #4 ci- " +
+        "dessus). Les pénalités sont semblables au #5 ci-dessus, avec un risque supplémentaire d'infection en " +
+        "raison de la perte énorme de peau (test d’E -20%). Si le test est raté, la nécrose résultante et la " +
+        "gangrène obligeront à amputer dans les 1d10 jours, à moins d’un sort de Shallya lancé avec succès. ",
+        "7 Les flammes viennent lécher l'aine de la cible, l’étourdissant pour 1d10 tours. Si c’est un homme, il " +
+        "devra réussir un test d’E -20% ou devenir stérile. Traiter l’inflammation du pantalon (cf #4 ci-dessus) ",
+        "8 Les flammes roussissent le pied de votre cible, lui brûlant la plupart des orteils et exposant les petits os " +
+        "sous les muscles noircis sans peau. Le test d'infection se fera à -20%. Le pied sera inutilisable jusqu'à " +
+        "ce que la cible se soit rétablie (1d10 jours). Elle subira M-2 et -20% à tous ses tests d’esquive de " +
+        "manière permanente, alors qu’elle boitillera à cause de sa jambe traumatisée. ",
+        "9 Un jet de flammes démolit le genou de votre cible. Elle tombe par terre, étourdie pendant 1d10/2 tours, " +
+        "incapable de se relever. Elle subira -20% à tous ses tests pendant le reste du combat en raison de la " +
+        "douleur. La jambe sera totalement inutilisable jusqu’à ce que la cible se rétablisse complètement (2d10 " +
+        "jours). Elle aura alors M-2 de façon permanente et souffrira de -30% à tous ses tests d’esquive, en " +
+        "raison d'une jointure raidie et de l’insensibilisation des nerfs. Une guérison magique réduira les " +
+        "pénalités à M-1 et -20% en esquive. ",
+        "10 Les flammes engloutissent la jambe entière, enflammant le pantalon de la cible et la projetant au sol. " +
+        "Elle lâche ce qu’elle tient en main, tapant sur les flammes pour les éteindre (action complète et test " +
+        "d’Ag -20%). Si elle n’a pas de vêtement ou si elle n’a pas éteint le feu après 3 tours, elle sera étourdie " +
+        "pendant 1d10/2 tours puis elle subira -30% à tous ses tests en raison de sa jambe agonisante, des " +
+        "pustules et de la masse de chair roussie d’où pendent des lambeaux de peau. Elle sera inutilisable " +
+        "jusqu’à la guérison complète. Le test d’Infection sera à -20% et les malus permanents comme au #9. ",
+        "11 Une explosion de flamme réduit le pied de votre cible en souche cramoisie avec quelques petits bouts " +
+        "d’os qui dépassent. La cible s’effondre impuissante et envahit par la douleur pendant 1d10 tours. Le " +
+        "pied est perdu de manière définitive. ",
+        "12 Un jet de flammes calcine la plupart des faibles tissus de la jambe, laissant devenir la partie inférieure " +
+        "de la jambe comme un fin bâton noir, fragilisé par un pied à peine relié à l’ensemble. La cible tombe " +
+        "par terre à l’agonie dans un cri perçant, impuissante face à la douleur et au choc pendant 2d10 tours, " +
+        "subissant -20% à tous ses tests pour le reste de la journée. La partie inférieure de la jambe est " +
+        "irrémédiablement perdue, n’ayant besoin que d’un coup sec pour se briser. ",
+        "13 Une boule de feu emporte la jambe de la cible, la soufflant entièrement tout en la cautérisant. La cible " +
+        "doit réussir immédiatement un test de FM -20% ou tomber au sol inconsciente. En cas de réussite, elle " +
+        "sera juste considérée comme impuissante et paralysée par la douleur pendant 2d10 tours, en subissant - " +
+        "30% à tous ses tests pour le reste de la journée. ",
+        "14 Un jet de flammes souffle la hanche de la cible, grillant le joint et faisant cuire une partie des intestins " +
+        "à l'intérieur de son abdomen. Elle tombe inconsciente au sol, la mort survenant 2d10 tours plus tard. ",
+        "15 La jambe de la cible est complètement désolidarisée de la hanche par l’énorme explosion de flammes, " +
+        "le feu ravageant la chair loin jusqu’au niveau du bassin. Le bouillonnement du sang rompt des artères " +
+        "majeures et cause une explosion de sang au dessus de la cible mourante."
+    ]
+}
+const explosives = {
+    "arm": [
 
     ],
     "body": [
@@ -721,9 +1149,11 @@ const blunt = {
 }
 export const critSources = [
     { source: "default", label: "Classique" }, { source: "cutting", label: "Armes tranchantes" },
+    { source: "blunt", label: "Armes contondantes" },
     { source: "firearm", label: "Armes à feu" }, { source: "arrow", label: "Flèches" },
+    { source: "fire", label: "Feu et énergétique" },
 
 ];
 export const critTable = {
-    "default": defaultCrit, firearm, cutting, arrow
+    "default": defaultCrit, firearm, cutting, arrow, blunt, fire
 }

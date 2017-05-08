@@ -1,5 +1,7 @@
 div.critDisplayer{
     display: flex;
+    margin-right: 0.5em;
+    margin-left:0.5em;
 }
 div.critDisplayer .sliderContainer{
     width: 400px;
